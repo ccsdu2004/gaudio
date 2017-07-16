@@ -1,0 +1,61 @@
+# Project: midi
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = common.o instrum.o instrum_dls.o mix.o output.o playmidi.o readmidi.o resample.o tables.o timidity.o streamBuffer.o $(RES)
+LINKOBJ  = common.o instrum.o instrum_dls.o mix.o output.o playmidi.o readmidi.o resample.o tables.o timidity.o streamBuffer.o $(RES)
+LIBS =  -L"D:/MinGW/lib" -L"E:/c++lib/gcc"  
+INCS =  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"D:/Microsoft DirectX SDK (March 2009)/Include" 
+CXXINCS =  -I"D:/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/DEV-CPP/include/c++/3.4.2"  -I"D:/DEV-CPP/include"  -I"E:/c++header" 
+BIN  = midi.a
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before midi.a all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	ar r $(BIN) $(LINKOBJ)
+	ranlib $(BIN)
+
+common.o: common.c
+	$(CC) -c common.c -o common.o $(CFLAGS)
+
+instrum.o: instrum.c
+	$(CC) -c instrum.c -o instrum.o $(CFLAGS)
+
+instrum_dls.o: instrum_dls.c
+	$(CC) -c instrum_dls.c -o instrum_dls.o $(CFLAGS)
+
+mix.o: mix.c
+	$(CC) -c mix.c -o mix.o $(CFLAGS)
+
+output.o: output.c
+	$(CC) -c output.c -o output.o $(CFLAGS)
+
+playmidi.o: playmidi.c
+	$(CC) -c playmidi.c -o playmidi.o $(CFLAGS)
+
+readmidi.o: readmidi.c
+	$(CC) -c readmidi.c -o readmidi.o $(CFLAGS)
+
+resample.o: resample.c
+	$(CC) -c resample.c -o resample.o $(CFLAGS)
+
+tables.o: tables.c
+	$(CC) -c tables.c -o tables.o $(CFLAGS)
+
+timidity.o: timidity.c
+	$(CC) -c timidity.c -o timidity.o $(CFLAGS)
+
+streamBuffer.o: streamBuffer.c
+	$(CC) -c streamBuffer.c -o streamBuffer.o $(CFLAGS)

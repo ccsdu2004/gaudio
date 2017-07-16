@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1387541181 source:d:\projects\gaudio-sdk\gaudio\gaudio-sdk\example\c\bassboost.c
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	"gaudio.h"
+
+1387457835 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\gaudio.h
+	<stdint.h>
+	"echo.h"
+	"phaser.h"
+	"modulator.h"
+	"fade.h"
+	"bassboost.h"
+	"speedchanger.h"
+	"distortion.h"
+	"fft.h"
+	"autowah.h"
+	"stereoenhancer.h"
+	"crossfeed.h"
+
+1367727264 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\stdint.h
+	<stddef.h>
+
+1380610963 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\echo.h
+
+1380611119 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\phaser.h
+
+1380611073 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\modulator.h
+
+1380610989 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\fade.h
+
+1380610880 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\bassboost.h
+
+1380962711 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\speedchanger.h
+
+1380611038 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\distortion.h
+
+1379341746 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\fft.h
+
+1380610888 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\autowah.h
+
+1380611159 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\stereoenhancer.h
+
+1380610917 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\crossfeed.h
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gdistortion" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="..\gaudio-sdk\bin\addons\gdistortion" prefix_auto="1" extension_auto="1" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+					<Add directory="..\gaudio-sdk\include" />
+				</Compiler>
+				<Linker>
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DBUILDING_DLL=1" />
+			<Add directory="D:\Projects\gaudio-sdk\gaudio-sdk\include" />
+		</Compiler>
+		<Linker>
+			<Add option="../gaudio-sdk/lib/libgaudio.dll.a" />
+		</Linker>
+		<Unit filename="gdistortion.cpp" />
+		<Unit filename="private.rc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

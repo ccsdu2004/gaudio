@@ -1,0 +1,741 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+    <title>The Geek Audio SDK Library</title>
+    <link rel="stylesheet" href="doc.css" type="text/css"/>
+  </head>
+
+  <body>
+    <h1>The Geek Audio SDK Library (GAudio 2.1.0.3)</h1>
+
+    <h1>Contents</h1>
+
+    <ul>
+      <li>
+        <a href="#ReleaseHistory">Release History</a>
+      </li>
+      <li>
+        <a href="#Introduction">Introduction</a>
+        <ul>
+          <li><a href="#Licensing">Licensing</a></li>
+          <li><a href="#History">Some History</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#CompilingLinking">Compiling and Linking</a>
+      </li>
+      <li>
+        <a href="#API">The GAudio API</a>
+        <ul>
+            <li><a href="#gaudio_init">gaudio_init</a></li>
+            <li><a href="#gaudio_deinit">gaudio_deinit</a></li>
+            <li><a href="#gaudio_error_get">gaudio_error_get</a></li>
+            <li><a href="#gaudio_listener_set_float3">gaudio_listener_set_float3</a></li>
+            <li><a href="#gaudio_listener_get_float3">gaudio_listener_set_float3</a></li>
+            <li><a href="#gaudio_is_support">gaudio_is_support</a></li>
+            <li><a href="#gaudio_set_float">gaudio_set_float</a></li>
+            <li><a href="#gaudio_get_float">gaudio_get_float</a></li>
+            <li><a href="#gaudio_set_int32">gaudio_set_int32</a></li>
+            <li><a href="#gaudio_get_int32">gaudio_get_int32</a></li>
+            <li><a href="#gaudio_set_string">gaudio_set_string</a></li>
+            <li><a href="#gaudio_get_string">gaudio_get_string</a></li>
+            <li><a href="#gaudio_address_get">gaudio_address_get</a></li>            
+            <li><a href="#gaudio_source_create_from_file">gaudio_source_create_from_file</a></li>
+            <li><a href="#gaudio_source_create_from_buffer">gaudio_source_create_from_buffer</a></li>
+            <li><a href="#gaudio_source_create_from_virtual_io">gaudio_source_create_from_virtual_io</a></li>
+            <li><a href="#gaudio_source_create_from_buffer2">gaudio_source_create_from_buffer2</a></li>
+            <li><a href="#gaudio_source_destroy">gaudio_source_destroy</a></li>
+            <li><a href="#gaudio_source_set_user">gaudio_source_set_user</a></li>
+            <li><a href="#gaudio_source_get_user">gaudio_source_get_user</a></li>
+            <li><a href="#gaudio_source_set_finish_callback">gaudio_source_set_finish_callback</a></li>
+            <li><a href="#gaudio_source_set_error_callback">gaudio_source_set_error_callback</a></li>
+            <li><a href="#gaudio_source_set_float3">gaudio_source_set_float3</a></li>
+            <li><a href="#gaudio_source_get_float3">gaudio_source_get_float3</a></li>
+            <li><a href="#gaudio_source_set_float">gaudio_source_set_float</a></li>
+            <li><a href="#gaudio_source_get_float">gaudio_source_get_float</a></li>     
+            <li><a href="#gaudio_source_get_int32">gaudio_source_get_int32</a></li>
+            <li><a href="#gaudio_source_set_int32">gaudio_source_set_int32</a></li>
+            <li><a href="#gaudio_source_get_string">gaudio_source_get_string</a></li>                        
+            <li><a href="#gaudio_source_start">gaudio_source_start</a></li>
+            <li><a href="#gaudio_source_start_3d">gaudio_source_start_3d</a></li>
+            <li><a href="#gaudio_source_pause">gaudio_source_pause</a></li>
+            <li><a href="#gaudio_source_stop">gaudio_source_stop</a></li>
+            <li><a href="#gaudio_source_seek">gaudio_source_seek</a></li>
+            <li><a href="#gaudio_source_set_position_callback">gaudio_source_set_position_callback</a></li>               
+            <li><a href="#gaudio_effect_create">gaudio_effect_create</a></li>
+            <li><a href="#gaudio_effect_destroy">gaudio_effect_destroy</a></li>
+            <li><a href="#gaudio_effect_bind">gaudio_effect_bind</a></li>
+            <li><a href="#gaudio_effect_bind_to_source">gaudio_effect_bind_to_source</a></li>
+
+            <li><a href="#gaudio_effect_unbind">gaudio_effect_unbind</a></li>
+            <li><a href="#gaudio_effect_unbind_from_source">gaudio_effect_unbind_from_source</a></li>
+            <li><a href="#gaudio_effect_set_float">gaudio_effect_set_float</a></li>
+            <li><a href="#gaudio_effect_get_float">gaudio_effect_get_float</a></li> 
+            <li><a href="#gaudio_effect_set_int32">gaudio_effect_set_int32</a></li>
+            <li><a href="#gaudio_effect_get_int32">gaudio_effect_get_int32</a></li>                              
+            <li><a href="#gaudio_recorder_create">gaudio_recorder_create</a></li>
+            <li><a href="#gaudio_recorder_destroy">gaudio_recorder_destroy</a></li>
+            <li><a href="#gaudio_recorder_start">gaudio_recorder_start</a></li>
+            <li><a href="#gaudio_recorder_stop">gaudio_recorder_stop</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <h1><a name="ReleaseHistory"></a>Release History</h1>
+
+    <ul>
+      <li>2013-04-01: Version 0.5.5.0 </li>
+      <li>2013-04-10: Version 1.0.1 0 </li>
+      <li>2013-05-01: Version 1.4.0.8 </li>
+      <li>2013-05-10: Version 1.6.8.0 </li>
+      <li>2013-06-10: Version 1.7.2.0 </li>
+      <li>2013-07-07: Version 1.8.0.2 </li>
+      <li>2013-07-29: Version 1.9.8.6 </li>
+      <li>2013-08-16: Version 2.0.0.1 </li>
+      <li>2013-09-18: Version 2.0.6.0 </li>
+      <li>2006-10-05: Version 2.1.0.1 </li>
+    </ul>
+
+    <h1><a name="Introduction"></a>Introduction</h1>
+
+    <p>GAudio is a powerfull high level, cross-platform API for playing back
+    sound like games and multimedia applications. GAudio is free for
+    non-commercial use. There is also an advanced version of GAudio named
+    'GAudio pro' which can be purchased for a small license fee and may be used
+    in commercial products.</p>
+
+    <div class="example">
+      <h4>Example: 'Hello, world' in GAudio</h4>
+
+      <p>Here is the traditional first program for any language or library, but
+      this time it is actually <em>saying</em> 'Hello, world!' instead of
+      printing it:</p>
+
+<pre class="programlisting">#include &lt;stdlib.h&gt;
+#include &lt;gaudio.h&gt;
+
+int main (int argc, char **argv)
+{
+
+#ifdef WIN32 
+    gaudio_init("addons"); 
+#else 
+    gaudio_init("/usr/local/lib/gaudio/"); 
+#endif
+    gsource* source = gaudio_source_create_from_file(filename,FALSE);
+    gaudio_source_start(source,FALSE);
+    printf("\nplaying, press any key to quit.\n"); 
+    getch();
+    gaudio_source_stop(source); 
+    gaudio_source_destroy(source); 
+    gaudio_deinit();    
+    return EXIT_SUCCESS;
+}
+</pre>
+
+      <p>Note that there error checks are missing in the program above to keep
+      it simple.</p>
+
+    </div>
+
+    <h3><a name="CompilingLinking"></a>Compiling and Linking</h3>
+
+    <p>All GAudio programs should contain:</p>
+
+<pre class="programlisting">#include &lt;gaudio.h&gt;
+</pre>
+
+    <p>The GAudio header includes <tt>&lt;gaudio.h&gt;</tt> and other effect definational
+        files for you so you don't need to include them again -
+    although it does not hurt to do so. GAudio reserves the "gaudio<tt>_</tt>&quot; prefix for preprocessor macros, so you should
+    never define such a macro in your own program. Furthermore, you should not
+    rely on any macro starting with "gaudio<tt>_</tt>&quot; not mentioned in
+    this specification.</p>
+
+    <p>If you are using the GAudio, which is available via the <a href="http://www.geek-gaudio.org/"> GAudio homepage</a>, you can find
+    out the necessary compilation flags by using one of the following
+    commands:</p>
+
+<pre class="screen">pkg-config --cflags gaudio
+gaudio-config --cflags
+</pre>
+
+    <p>To find out the necessary flags for linking, use one of the following
+    commands:</p>
+
+<pre class="screen">pkg-config --libs gaudio
+gaudio-config --libs
+</pre>
+
+    <p>On Windows, link with <span style="font-size: 10pt">gaudio</span><tt>.dll</tt>.</p>
+
+    <p>
+        GAudio reserves the "gaudio_" prefix for globally visible
+    functions and variables, so you should never define such a function or
+    variable in your own program. Furthermore, you should not rely on any such
+    function or variable not mentioned in this specification.</p>
+
+    <h1><a name="API"></a>The GAudio API</h1>
+
+    <h3 class="manpage"><a name="gaudio_init"></a>gaudio_init</h3>
+
+    <h4>Name</h4>
+
+    <p><tt>&nbsp; &nbsp;gaudio_init</tt> - initialize the GAudio library and create a default
+    current context</p>
+
+    <h4>Synopsis</h4>
+
+<pre class="programlisting">
+void gaudio_init(const char* addons);
+</pre>
+
+    <h4>Description</h4>
+
+    <p><tt>gaudio_init</tt> initializes the GAudio library. </p>
+
+    <h3 class="manpage"><a name="gaudio_deinit"></a>gaudio_deinit</h3>
+
+    <h4>Name</h4>
+
+    <p><tt>gaudio_deinit</tt> - shutdown the GAudio library</p>
+
+    <h4>Synopsis</h4>
+
+    <pre class="programlisting">void gaudio_deinit(void);</pre>
+
+    <h4>Description</h4>
+
+    <p>When the application has finished playing or recordering audio, it should
+    shut down GAudio using <tt>gaudio_deinit</tt>. This closes GAudio context
+    that GAudio may have created in <tt>gaudio_deinit</tt> and unloads addons.
+    After calling <tt>gaudio_deinit</tt>, you may subsequently call
+    <tt>gaudio_init</tt> again.</p>
+	
+    <h3 class="manpage"><a name="gaudio_error_get"></a>gaudio_error_get</h3>
+
+    <h4>Name</h4>
+
+    <p><tt>gaudio_error_get</tt> - return and clear the current error state</p>
+
+    <h4>Synopsis</h4>
+
+<pre class="programlisting">int32_t gaudio_error_get(void);
+</pre>
+
+    <h4>Description</h4>
+
+    <p>When coding, gaudio_error_get can return current status of GAudio and clean last error if its have.</p>
+
+    <h4>Return Value</h4>
+
+    <p><tt>gaudio_error_get</tt> returns the contents of the global error state,
+    which can be one of the following values:</p>
+
+    <dl>
+      <dt><tt>AUDIO_NO_ERROR</tt></dt>
+      <dd>No GAudio error found.</dd>
+
+      <dt><tt>AUDIO_NOT_INIT</tt></dt>
+      <dd>No initialized.</dd>
+
+      <dt><tt>AUDIO_BAD_TAG</tt></dt>
+      <dd>Invalid input tag parameter.</dd>
+
+      <dt><tt>AUDIO_BAD_VALUE</tt></dt>
+      <dd>Invalid input value parameter.</dd>
+
+      <dt><tt>AUDIO_NOT_SUPPORT</tt></dt>
+      <dd>GAudio don't support this function.</dd>
+
+      <dt><tt>AUDIO_BAD_OPERATION</tt></dt>
+      <dd>This operation is prohibited.</dd>
+
+      <dt><tt>AUDIO_OUT_OF_MEMORY</tt></dt>
+      <dd>Out of memory -- some malloc() failed.</dd>
+
+      <dt><tt>AUDIO_INNER_ERROR</tt></dt>
+      <dd>GAudio internal error.</dd>
+    </dl>
+
+    <h4>Errors</h4>
+
+    <p><tt>gaudio_error_get</tt> can be called in any GAudio state and will never
+    fail.</p>	
+
+    <h3 class="manpage"><a name="gaudio_address_get"></a>gaudio_address_get</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_address_get</tt> - get function address by input function name </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void* gaudio_address_get(const char* name);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_address_get</tt> is called only for GAudio addons. </p>   
+
+    <h3 class="manpage"><a name="gaudio_is_support"></a>gaudio_is_support</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_is_support</tt> - check the given attribute is supported or not. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_is_support(int32_t param,int32_t value);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_is_support</tt> 's input param can be <tt>AUDIO_PLUGIN_AUDIO</tt>, 
+        <tt>AUDIO_PLUGIN_EFFECT</tt>,  <tt>AUDIO_PLUGIN_EFFECT</tt>, <tt>AUDIO_PLUGIN_DRIVER</tt> or <tt>AUDIO_PLUGIN_RECORDER</tt> and input parameter 's value is the corresponding enumeration. For example, if input param is <tt>AUDIO_PLUGIN_RECORDER</tt>, the input value can be the <tt>AUDIO_FORMAT_WAV</tt>, <tt>AUDIO_FORMAT_XM</tt> or other else. </p>  
+
+    <h3 class="manpage"><a name="gaudio_set_float"></a>gaudio_set_float</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_set_float</tt> - set GAudio 's global context float value. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_set_float(int32_t param,float value);</pre>
+    <h4>Description</h4>
+    <p>At present, input param can be <tt>AUDIO_ENUM_GAIN</tt> or <tt>AUDIO_ENUM_PAN</tt>. And <tt>AUDIO_ENUM_PAN</tt> 's range is (-10.0f,10.0f) </p>  
+
+    <h3 class="manpage"><a name="gaudio_get_float"></a>gaudio_get_float</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_get_float</tt> - get GAudio 's global context float value. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_get_float(int32_t param,float* value);</pre>
+    <h4>Description</h4>
+    <p>At present, input param can be <tt>AUDIO_ENUM_GAIN</tt> or <tt>AUDIO_ENUM_PAN</tt>. And <tt>AUDIO_ENUM_PAN</tt> 's range is (-10.0f,10.0f) </p>   
+
+    <h3 class="manpage"><a name="gaudio_set_int32"></a>gaudio_set_int32</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_set_int32</tt> - set GAudio 's global context integer value. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_set_int32(int32_t param,int32_t value);</pre>
+    <h4>Description</h4>
+    <p>At present, input param can be <tt>AUDIO_PLAY_MODE</tt> ,<tt>AUDIO_RECORD_MODE</tt> and <tt>AUDIO_ENUM_MUTE</tt>. And when setting <tt>AUDIO_RECORD_MODE</tt> , GAudio 's state enter recorder mode .</p>  
+
+    <h3 class="manpage"><a name="gaudio_get_int32"></a>gaudio_get_int32</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_get_int32</tt> - get GAudio 's global context integer value. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_get_int32(int32_t param,int32_t* value);</pre>
+    <h4>Description</h4>
+    <p>At present, input param can be <tt>AUDIO_PLAY_MODE</tt> ,<tt>AUDIO_RECORD_MODE</tt> and <tt>AUDIO_ENUM_MUTE</tt>. </p>                      
+
+    <h3 class="manpage"><a name="gaudio_get_int32"></a>gaudio_get_int32</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_get_int32</tt> - get GAudio 's global context integer value. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_get_int32(int32_t param,int32_t* value);</pre>
+    <h4>Description</h4>
+    <p>At present, input param can be <tt>AUDIO_PLAY_MODE</tt> ,<tt>AUDIO_RECORD_MODE</tt> and <tt>AUDIO_ENUM_MUTE</tt>. </p> 
+
+    <h3 class="manpage"><a name="gaudio_set_string"></a>gaudio_set_string</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_set_string</tt> - set GAudio 's global context string value. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_set_string(int32_t param,const char* value);</pre>
+    <h4>Description</h4>
+    <p>At present, input param can be <tt>AUDIO_ENUM_SOUNDFONT</tt> . And when it called, mid/midi decoder can be loaded which midi 's sound font is input value. </p>         
+ 
+    <h3 class="manpage"><a name="gaudio_get_string"></a>gaudio_get_string</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_get_string</tt> - get GAudio 's global context string value. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_get_string(int32_t param,char* value);</pre>
+    <h4>Description</h4>
+    <p>At present, input param can be <tt>AUDIO_ENUM_SOUNDFONT</tt> . </p> 
+
+    <h3 class="manpage"><a name="gaudio_listener_set_float3"></a>gaudio_listener_set_float3</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_listener_set_float3</tt> - set global listener 's 3D attribute. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_listener_set_float3(int32_t param,float x,float y,float z);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_listener_set_float3</tt> set global listener 's 3D attribute. At present, input param can be the following:</p> 
+    <ul>
+      <li><tt>AUDIO_ENUM_POSITION</tt></li>
+      <li><tt>AUDIO_ENUM_VELOCITY</tt></li>
+      <li><tt>AUDIO_ENUM_FORWARD</tt></li>
+      <li><tt>AUDIO_ENUM_UP</tt></li>  
+    </ul>	
+
+    <h3 class="manpage"><a name="gaudio_listener_get_float3"></a>gaudio_listener_set_float3</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_listener_get_float3</tt> - get global listener 's 3D attribute. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_listener_get_float3(int32_t param,float* x,float* y,float* z);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_listener_get_float3</tt> get global listener 's 3D attribute. At present, input param can be the following:</p> 
+    <ul>
+      <li><tt>AUDIO_ENUM_POSITION</tt></li>
+      <li><tt>AUDIO_ENUM_VELOCITY</tt></li>
+      <li><tt>AUDIO_ENUM_FORWARD</tt></li>
+      <li><tt>AUDIO_ENUM_UP</tt></li>  
+    </ul>	    
+	
+    <h3 class="manpage"><a name="gaudio_source_create_from_file"></a>gaudio_source_create_from_file</h3>
+
+    <h4>Name</h4>
+
+    <p><tt>gaudio_source_create_from_file</tt> - load a sound file and return gsource handler</p>
+
+    <h4>Synopsis</h4>
+
+<pre class="programlisting">gsource* gaudio_source_create_from_file (const char *filename, int32_t flag);
+</pre>
+
+    <p><tt>gaudio_source_create_from_file</tt> tries to guess the sound data format by
+    looking at the filename 's extension and return the related gsource handler.</p>
+
+	<h4>Description</h4>
+
+    <p><tt>gaudio_source_create_from_file</tt> returns a handler of gsource. The input flag points the loaded mode,
+    TRUE for stream mode and FALSE for common one. </p>
+	
+	<h4>Return Value</h4>
+
+    <p>On success, <tt>gaudio_source_create_from_file</tt> returns a gsource handler. On other hand, NULL for failed.</p>
+
+	
+	<h3 class="manpage"><a name="gaudio_source_create_from_buffer"></a>gaudio_source_create_from_buffer</h3>
+
+    <h4>Name</h4>
+
+    <p><tt>gaudio_source_create_from_buffer</tt> - load a sound file and return gsource handler</p>
+
+    <h4>Synopsis</h4>
+
+<pre class="programlisting">gsource* gaudio_source_create_from_buffer(int8_t* buffer,uint32_t length);
+</pre>
+
+    <p><tt>gaudio_source_create_from_file</tt> tries to guess the sound data format by
+    looking at the filename 's extension and return the related gsource handler.</p>
+	
+    <h4>Return Value</h4>
+
+    <p>On success, <tt>gaudio_source_create_from_file</tt> returns a gsource handler. On other hand, NULL for failed.</p>
+	
+	
+    <h3 class="manpage"><a name="gaudio_source_create_from_virtual_io"></a>gaudio_source_create_from_virtual_io</h3>
+
+    <h4>Name</h4>
+
+    <p><tt>gaudio_source_create_from_virtual_io</tt> - load sound data from virtrual IO stream</p>
+
+    <h4>Synopsis</h4>
+
+<pre class="programlisting">gsource* gaudio_source_create_from_virtual_io(gread read,gseek seek,gtell tell,gclose close,void* user);
+</pre>
+
+    <p><tt>gaudio_source_create_from_virtual_io</tt> tries to create gsource by virtual IO.</p>
+
+    <h4>Return Value</h4>
+
+    <p>On success, <tt>gaudio_source_create_from_virtual_io</tt> returns a gsource handler. </p>
+
+    <h3 class="manpage"><a name="gaudio_source_create_from_buffer2"></a>gaudio_source_create_from_buffer2</h3>
+
+    <h4>Name</h4>
+
+    <p><tt>gaudio_source_create_from_buffer2</tt> - create a gsource handler from raw pcm buffer.</p>
+
+    <h4>Synopsis</h4>
+
+<pre class="programlisting">gsource gaudio_source_create_from_buffer2(uint32_t samplerate,uint32_t channels,uint32_t format,int8_t* pcm,uint32_t length);
+</pre>
+
+    <h4>Description</h4>
+    <p><tt>gaudio_source_create_from_buffer2</tt> create a gsource handler from raw pcm buffer.
+	The samplerate range is [8000,48000]. The channels range is one or two and [8,32] for format.</p>
+ 
+ 
+    <h3 class="manpage"><a name="gaudio_source_destroy"></a>gaudio_source_destroy</h3>
+
+    <h4>Name</h4>
+
+    <p><tt>gaudio_source_destroy</tt> - destroy input gsource handler</p>
+
+    <h4>Synopsis</h4>
+
+    <pre class="programlisting">void gaudio_source_destroy(gsource* source)</pre>
+
+    <h3 class="manpage"><a name="gaudio_source_set_user"></a>gaudio_source_set_user</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_set_user</tt> - set a client data to gsource</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_source_set_user(gsource* source,void* user);</pre>
+
+    <h3 class="manpage"><a name="gaudio_source_get_user"></a>gaudio_source_set_user</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_get_user</tt> - get a client data to gsource</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void* gaudio_source_get_user(gsource* source);</pre>
+    <h4>Return Value</h4>
+    <p> the client data.</p>	
+
+    <h3 class="manpage"><a name="gaudio_source_set_finish_callback"></a>gaudio_source_set_finish_callback</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_set_finish_callback</tt> - set gsource with finish callback function. When sound 
+	source is playing back finished, this function will be called.</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_source_set_finish_callback(gsource* source,gfinish finish)</pre>
+	
+    <h3 class="manpage"><a name="gaudio_source_set_error_callback"></a>gaudio_source_set_error_callback</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_set_error_callback</tt> - set gsource with error callback function. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_source_set_error_callback(gsource* source,gerror error);</pre>
+ 
+    <h3 class="manpage"><a name="gaudio_source_set_float3"></a>gaudio_source_set_float3</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_set_float3</tt> - set gsource 's 3D attribute. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_source_set_float3(gsource* source,int32_t param,float x,float y,float z);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_source_set_float3</tt> set gsource 's 3D attribute. At present, supported flag is the following:</p> 
+    <ul>
+      <li><tt>AUDIO_ENUM_POSITION</tt></li>
+      <li><tt>AUDIO_ENUM_VELOCITY</tt></li>
+      <li><tt>AUDIO_ENUM_FORWARD</tt></li>
+      <li><tt>AUDIO_ENUM_UP</tt></li>
+    </ul>	
+	
+    <h3 class="manpage"><a name="gaudio_source_get_float3"></a>gaudio_source_get_float3</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_get_float3</tt> - get gsource 's 3D attribute. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_source_get_float3(gsource* source,int32_t param,float* x,float* y,float* z);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_source_get_float3</tt> get gsource 's 3D attribute. At present, supported flag is the following:</p> 
+    <ul>
+      <li><tt>AUDIO_ENUM_POSITION</tt></li>
+      <li><tt>AUDIO_ENUM_VELOCITY</tt></li>
+      <li><tt>AUDIO_ENUM_FORWARD</tt></li>
+      <li><tt>AUDIO_ENUM_UP</tt></li>
+    </ul>	
+	
+    <h3 class="manpage"><a name="gaudio_source_start"></a>gaudio_source_start</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_start</tt> - playing back source. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">gaudio_source_start(gsource* source,int32_t flag);</pre>	
+    <h4>Description</h4>
+    <p><tt>gaudio_source_start</tt> play back source. At present, input parameter flag is not used.</p> 
+	
+    <h3 class="manpage"><a name="gaudio_source_3d"></a>gaudio_source_3d</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_3d</tt> - playing back source. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">gaudio_source_3d(gsource* source,int32_t flag);</pre>	
+    <h4>Description</h4>
+    <p><tt>gaudio_source_3d</tt> play back source with 3D mode. At present, 3D mode is not be supported and input parameter flag is not used.</p> 	
+	
+    <h3 class="manpage"><a name="gaudio_source_pause"></a>gaudio_source_pause</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_pause</tt> - make source into pause status. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_source_pause(gsource* source);</pre>	
+ 
+    <h3 class="manpage"><a name="gaudio_source_stop"></a>gaudio_source_stop</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_stop</tt> - make source into stop status. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_source_stop(gsource* source);</pre>	 
+	
+    <h3 class="manpage"><a name="gaudio_source_seek"></a>gaudio_source_seek</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_seek</tt> - seek source's playback position </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_source_seek(gsource* source,int32_t missecond);</pre>
+
+    <h3 class="manpage"><a name="gaudio_source_set_position_callback"></a>gaudio_source_set_position_callback</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_set_position_callback</tt> - resiter a position callback function to input source handler </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">gaudio_source_set_position_callback(gsource* source,gposition position);</pre>	
+	
+    <h3 class="manpage"><a name="gaudio_source_set_int32"></a>gaudio_source_set_int32</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_set_int32</tt> - set gsource 's integer attribute. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">gaudio_source_set_int32(gsource* source,int32_t param,int32_t value);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_source_set_int32</tt> set gsource 's integer attribute. At present, supported flag is the following:</p> 
+    <ul>
+      <li><tt>AUDIO_ENUM_LOOP</tt></li>
+      <li><tt>AUDIO_ENUM_MUTE</tt></li>
+    </ul>		
+	
+    <h3 class="manpage"><a name="gaudio_source_get_int32"></a>gaudio_source_get_int32</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_set_int32</tt> - get gsource 's integer attribute. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_source_get_int32(gsource* source,int32_t param,int32_t* value);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_source_get_int32</tt> get gsource 's integer attribute. At present, supported flag is the following:</p> 
+    <ul>
+      <li><tt>AUDIO_ENUM_LOOP</tt></li>
+      <li><tt>AUDIO_ENUM_MUTE</tt></li>
+      <li><tt>AUDIO_ENUM_SAMPLERATE</tt></li>
+      <li><tt>AUDIO_ENUM_CHANNEL</tt></li>
+      <li><tt>AUDIO_ENUM_DURATION</tt></li>	  
+    </ul>	
+
+    <h3 class="manpage"><a name="gaudio_source_get_string"></a>gaudio_source_get_string</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_source_get_string</tt> - get gsource 's string attribute. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">int32_t gaudio_source_get_string(gsource* source,int32_t param,char* value);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_source_get_string</tt> get gsource 's string attribute. At present, supported flag is the following:</p> 
+    <ul>
+      <li><tt>AUDIO_ENUM_TITLE</tt></li>
+      <li><tt>AUDIO_ENUM_TRACK</tt></li>
+      <li><tt>AUDIO_ENUM_ALBUM</tt></li>
+      <li><tt>AUDIO_ENUM_ARTIST</tt></li>
+      <li><tt>AUDIO_ENUM_PUBLISHDATE</tt></li>
+      <li><tt>AUDIO_ENUM_GENRE</tt></li>
+      <li><tt>AUDIO_ENUM_GENRE</tt></li>	  
+    </ul>	
+
+    <h3 class="manpage"><a name="gaudio_effect_create"></a>gaudio_effect_create</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_create</tt> - get geffect handler by effect id</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">geffect* gaudio_effect_create(int32_t effect,int32_t flag);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_effect_create</tt> get geffect handler by effect id. And flag is not used now. Effect id is the following:</p> 
+    <ul>
+      <li><tt>AUDIO_EFFECT_PHASER</tt></li>
+      <li><tt>AUDIO_EFFECT_INVERT</tt></li>
+      <li><tt>AUDIO_EFFECT_SWAP_CHANNEL</tt></li>
+      <li><tt>AUDIO_EFFECT_MERGE_CHANNEL</tt></li>
+      <li><tt>AUDIO_EFFECT_SPEED_CHANGER</tt></li>
+      <li><tt>AUDIO_EFFECT_ECHO</tt></li>
+      <li><tt>AUDIO_EFFECT_REVERB</tt></li>
+      <li><tt>AUDIO_EFFECT_FFT</tt></li>
+      <li><tt>AUDIO_EFFECT_EQUALIZER</tt></li>
+      <li><tt>AUDIO_EFFECT_BASSBOOST</tt></li>
+      <li><tt>AUDIO_EFFECT_CHORUS</tt></li>
+      <li><tt>AUDIO_EFFECT_STEREO_ENHANCE</tt></li>	  
+      <li><tt>AUDIO_EFFECT_DISTORTION</tt></li>
+      <li><tt>AUDIO_EFFECT_FOLDBACK_DISTORTION</tt></li>
+      <li><tt>AUDIO_EFFECT_FLANGER</tt></li>
+      <li><tt>AUDIO_EFFECT_AUTOWAH</tt></li>
+      <li><tt>AUDIO_EFFECT_COMPRESSER</tt></li>
+      <li><tt>AUDIO_EFFECT_MODULATOR</tt></li>
+      <li><tt>AUDIO_EFFECT_FADE_IN</tt></li>
+      <li><tt>AUDIO_EFFECT_FADE_OUT</tt></li>
+      <li><tt>AUDIO_EFFECT_LEVELLER</tt></li>
+      <li><tt>AUDIO_EFFECT_ZIPPER</tt></li>
+      <li><tt>AUDIO_EFFECT_CROSSFEED</tt></li>
+      <li><tt>AUDIO_EFFECT_PCM</tt></li>
+      <li><tt>AUDIO_EFFECT_TREMOLO</tt></li>
+    </ul>	
+
+    <h3 class="manpage"><a name="gaudio_effect_destroy"></a>gaudio_effect_destroy</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_destroy</tt> - destroy effect handler. </p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void GAPIENTRY gaudio_effect_destroy(geffect* effect);</pre>
+
+    <h3 class="manpage"><a name="gaudio_effect_set_fft_callback"></a>gaudio_effect_set_fft_callback</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_set_fft_callback</tt> - set fft callback to effect handler</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_effect_set_fft_callback(geffect*,gefxcb);</pre>    
+    <p><tt>gaudio_effect_set_fft_callback</tt> can set only to AUDIO_EFFECT_FFT effect</p>         
+
+    <h3 class="manpage"><a name="gaudio_effect_set_pcm_callback"></a>gaudio_effect_set_pcm_callback</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_set_pcm_callback</tt> - set pcm callback to effect handler</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_effect_set_pcm_callback(geffect* efx,gefxpcmcb cb);</pre>    
+    <p><tt>gaudio_effect_set_pcm_callback</tt> can set only to AUDIO_EFFECT_PCM effect</p>  
+
+    <h3 class="manpage"><a name="gaudio_effect_bind"></a>gaudio_effect_bind</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_bind</tt> - bind effect handler to global context</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_effect_bind(geffect* effect,int32_t flag);</pre>    
+    <p><tt>gaudio_effect_bind</tt> 's input parameter flag isn't used. </p>      
+    <p><tt>AUDIO_EFFECT_FADE_IN</tt> and <tt>AUDIO_EFFECT_FADE_OUT</tt> isn't bind to global context. It can only bind to source </p> 
+    
+    <h3 class="manpage"><a name="gaudio_effect_unbind"></a>gaudio_effect_unbind</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_unbind</tt> - unbind effect from global context</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_effect_unbind(geffect* effect);</pre>
+
+    <h3 class="manpage"><a name="gaudio_effect_unbind_from_source"></a>gaudio_effect_unbind_from_source</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_unbind_from_source</tt> - unbind effect from source</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_effect_unbind_from_source(geffect* effect,gsource* source);</pre>
+    <h4>Description</h4>
+    <p>If <tt>gaudio_effect_unbind_from_source</tt> called, this effect cannot affect source 's output. </p> 
+
+    <h3 class="manpage"><a name="gaudio_effect_set_float"></a>gaudio_effect_set_float</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_set_float</tt> - set effect 's float attribute</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_effect_set_float(geffect* effect,int32_t param,float value);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_effect_set_float</tt> is determined by the input effect type.   For example, if input effect is <tt>AUDIO_EFFECT_BASSBOOST</tt>, the param can be <tt>AUDIO_EFFECT_BASSBOOST_FREQUENCE</tt> or <tt>AUDIO_EFFECT_BASSBOOST_GAIN</tt> </p> 
+
+    <h3 class="manpage"><a name="gaudio_effect_get_float"></a>gaudio_effect_set_float</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_get_float</tt> - get effect 's float attribute</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_effect_get_float(geffect* effect,int32_t param,float* value);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_effect_get_float</tt> is determined by the input effect type.   For example, if input effect is <tt>AUDIO_EFFECT_BASSBOOST</tt>, the param can be <tt>AUDIO_EFFECT_BASSBOOST_FREQUENCE</tt> or <tt>AUDIO_EFFECT_BASSBOOST_GAIN</tt> </p> 
+
+    <h3 class="manpage"><a name="gaudio_effect_set_int32"></a>gaudio_effect_set_int32</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_set_int32</tt> - set effect 's integer attribute</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_effect_set_int32(geffect* effect,int32_t param,int32_t value);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_effect_set_int32</tt> is determined by the input effect type.   For example, if input effect is <tt>AUDIO_EFFECT_MODULATOR</tt>, the param can be <tt>AUDIO_EFFECT_MODULATOR_FREQUENCY</tt> </p>     
+
+    <h3 class="manpage"><a name="gaudio_effect_get_int32"></a>gaudio_effect_get_int32</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_effect_get_int32</tt> - get effect 's integer attribute</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_effect_get_int32(geffect* effect,int32_t param,int32_t* value);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_effect_get_int32</tt> is determined by the input effect type.   For example, if input effect is <tt>AUDIO_EFFECT_MODULATOR</tt>, the param can be <tt>AUDIO_EFFECT_MODULATOR_FREQUENCY</tt> </p>
+
+    <h3 class="manpage"><a name="gaudio_recorder_create"></a>gaudio_recorder_create</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_recorder_create</tt> - create grecorder handler by input configuration</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">grecorder* gaudio_recorder_create(const char* filename,uint32_t type,uint32_t channel,uint32_t samplerate,uint32_t format);</pre>
+    <h4>Description</h4>
+    <p><tt>gaudio_recorder_create</tt> create grecorder and then calling <tt>gaudio_recorder_write</tt> can write recording pcm data to filename </p>
+
+    <h3 class="manpage"><a name="gaudio_recorder_write"></a>gaudio_recorder_write</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_recorder_write</tt> - write recording pcm data to output file</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_recorder_write(grecorder* recorder);</pre>
+
+    <h3 class="manpage"><a name="gaudio_recorder_pause"></a>gaudio_recorder_pause</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_recorder_pause</tt> - set grecorder 's status as pause</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_recorder_pause(grecorder* recorder);</pre>
+
+    <h3 class="manpage"><a name="gaudio_recorder_stop"></a>gaudio_recorder_stop</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_recorder_stop</tt> - set grecorder 's status as stop</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_recorder_stop(grecorder* recorder);</pre>
+
+    <h3 class="manpage"><a name="gaudio_recorder_destroy"></a>gaudio_recorder_destroy</h3>
+    <h4>Name</h4>
+    <p><tt>gaudio_recorder_destroy</tt> - destroy grecorder handler</p>
+    <h4>Synopsis</h4>
+    <pre class="programlisting">void gaudio_recorder_destroy(grecorder* recorder);</pre>
+                 
+  </body>  
+</html>
+<!-- Emacs stuff:
+     ;;; Local Variables: ***
+     ;;; mode: xml ***
+     ;;; End: ***
+ -->

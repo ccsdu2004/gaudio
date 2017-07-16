@@ -1,0 +1,77 @@
+# depslib dependency file v1.0
+1387541202 source:d:\projects\gaudio-sdk\gaudio\gaudio-sdk\example\c\echo.c
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	"gaudio.h"
+
+1387547001 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\gaudio.h
+	<stdint.h>
+	<effect/effect.h>
+
+1367727264 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\stdint.h
+	<stddef.h>
+
+1380610963 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\echo.h
+
+1380611119 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\phaser.h
+
+1380611073 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\modulator.h
+
+1380610989 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\fade.h
+
+1380610880 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\bassboost.h
+
+1380962711 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\speedchanger.h
+
+1380611038 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\distortion.h
+
+1379341746 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\fft.h
+
+1380610888 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\autowah.h
+
+1380611159 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\stereoenhancer.h
+
+1380610917 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\crossfeed.h
+
+1387547258 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\effect.h
+	<effect/autowah.h>
+	<effect/bassboost.h>
+	<effect/crossfeed.h>
+	<effect/distortion.h>
+	<effect/echo.h>
+	<effect/fade.h>
+	<effect/fft.h>
+	<effect/modulator.h>
+	<effect/phaser.h>
+	<effect/speedchanger.h>
+	<effect/stereoenhancer.h>
+	<effect/stereomatrix.h>
+	<effect/tremolo.h>
+
+1380610888 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\autowah.h
+
+1380610880 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\bassboost.h
+
+1380610917 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\crossfeed.h
+
+1380611038 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\distortion.h
+
+1380610963 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\echo.h
+
+1379341746 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\fft.h
+
+1380611073 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\modulator.h
+
+1380611119 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\phaser.h
+
+1380962711 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\speedchanger.h
+
+1380611159 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\stereoenhancer.h
+
+1387546719 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\tremolo.h
+
+1380610989 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\fade.h
+
+1380611196 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\stereomatrix.h
+

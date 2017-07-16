@@ -1,0 +1,31 @@
+# Project: bs2b
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = bs2b.o $(RES)
+LINKOBJ  = bs2b.o $(RES)
+LIBS =  -L"D:/MinGW/lib" -L"D:/DEV-CPP/lib" -L"E:/c++lib/gcc"  
+INCS =  -I"D:/DEV-CPP/include"  -I"E:/c++header" 
+CXXINCS =  -I"D:/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/DEV-CPP/include/c++/3.4.2"  -I"D:/DEV-CPP/include"  -I"E:/c++header" 
+BIN  = bs2b.a
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before bs2b.a all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	ar r $(BIN) $(LINKOBJ)
+	ranlib $(BIN)
+
+bs2b.o: bs2b.c
+	$(CC) -c bs2b.c -o bs2b.o $(CFLAGS)

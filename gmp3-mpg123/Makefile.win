@@ -1,0 +1,37 @@
+# Project: fade
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = gmp3_private.res
+OBJ  = gmp3.o $(RES)
+LINKOBJ  = gmp3.o $(RES)
+LIBS =  -L"D:/MinGW/lib" -L"E:/c++lib/gcc" ../gaudio-sdk/lib/libgaudio.dll.a E:/c++lib/gcc/libmpg123.a  -s 
+INCS =  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"D:/Microsoft DirectX SDK (March 2009)/Include"  -I"../gaudio-sdk/include" 
+CXXINCS =  -I"D:/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/DEV-CPP/include/c++/3.4.2"  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"../gaudio-sdk/include" 
+BIN  = ../gaudio-sdk/bin/addons/gmp3.dll
+CXXFLAGS = $(CXXINCS)   -O2
+CFLAGS = $(INCS)   -O2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../gaudio-sdk/bin/addons/gmp3.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=../gaudio-sdk/bin/addons/libgmp3.def
+STATICLIB=../gaudio-sdk/bin/addons/libgmp3.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+gmp3.o: gmp3.cpp
+	$(CPP) -c gmp3.cpp -o gmp3.o $(CXXFLAGS)
+
+gmp3_private.res: gmp3_private.rc 
+	$(WINDRES) -i gmp3_private.rc --input-format=rc -o gmp3_private.res -O coff 

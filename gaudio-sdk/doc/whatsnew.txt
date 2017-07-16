@@ -1,0 +1,86 @@
+ÐÞ¸Ä¼ÇÂ¼
+1.Posted on 2013/04/01
+    First release
+2.Posted on 2013/04/10
+    Support Macrosoft 's wav format.	
+3.Posted on 2013/05/01
+    Update version to 1.4.0.8
+    Support 2 source mixing
+    Support echo effect
+    Support Sun Microsystems 's au format
+    Support bassboost effect
+    Add function gaudio_address_get
+    Add example echo/mixer/stream/bassboost
+    Useing plugin mode add decoder, effect and audio driver
+4.Posted on 2013/05/10
+    Update version to 1.6.8.0
+    Optimize code
+    Add Speedchanger effect
+    Add Invert effect
+    Add Channel merge and Channel swap effect
+    Add example for Speedchanger
+    Add library for msvc
+    Add function gaudio_set_long and gaudio_get_long
+    Support Musepack audio decoding
+    Add API document partially	
+5.Posted on 2013/06/10
+    Update version to 1.7.2.0
+    Add function - gaudio_source_set_error_callback
+    Add function - gaudio_source_set_finish_callbacl
+    Rename function gaudio_effect_setcallback as gaudio_effect_set_callback
+    Add example feature
+    Support MP3 audio 's decoding
+    Add pan setting
+6.Posted on 2013/07/07
+    Update version to 1.8.0.2
+    Support AIFF 's decoding
+    Support phaser effect
+    Modify API 's long type as int32_t for portable code
+    Add function gaudio_source_create_from_buffer2 for pcm buffer playing
+    Simply Wav 's decoding
+    Fixed a bug for memory leak
+    Support audio recoding function
+    Add recoding example
+    Support TTA audio decoding	
+7.Posted on 2013/07/29
+    Update version to 1.9.8.6
+    Support distortion effect 
+    Support foldback distortion effect
+    Add portaudio audio driver addon
+    Support linux OS
+    Support mid/midi music format 's decoding
+    Support cross feed effect
+8.Posted on 2013/08/16
+    Update version to 2.0.0.1
+    Add libsndfile decoding addon for flac/ogg/au/wav/aiff/voc/caf
+    Using mpg123 instead of libmad for decoding MP3
+    Support FFT effect
+    Support S3M format's decoding
+9.Posted on 2013/09/08
+    Update version t0 2.0.6.0
+    Support XM format's decoding
+    Support MOD format's decoding
+    Support IT format's decoding
+    Add autowah effect
+10.Posted on 2013/09/20
+    Update version to 2.1.0.1
+    Support binding to C#
+    Fixed a bug of modulator
+    Moving cross feed from gaudio core to gcrossfeed
+    Rename function gaudio_effect_set_callback as gaudio_effect_set_fft_callback
+    Add function as gaudio_effect_set_pcm_callback
+    Support 8-source mixing
+    Rename AUDIO_ENUM_SILENCE as AUDIO_ENUM_MUTE
+    Support global mute
+    Fixed a bug of calling gaudio_set_float(AUDIO_ENUM_GAIN,gain)
+    Support source 's gain setting
+    Add a GUI application - GPlayer
+    Fixed a bug of playing au format
+    Finished API document
+    Optimize code
+    Fixed a bug of playing memory buffer
+11.Posted on 2013/10/07
+    Update version to 2.1.0.3
+    Optimize MP3 decoding
+    Fixed the memory leak when destroying gsource
+    Add function - gaudio_recording_pause

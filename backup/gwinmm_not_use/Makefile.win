@@ -1,0 +1,40 @@
+# Project: winmm
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = winmm_private.res
+OBJ  = gwinmm.o sfifo.o $(RES)
+LINKOBJ  = gwinmm.o sfifo.o $(RES)
+LIBS =  -L"D:/MinGW/lib" -L"D:/DEV-CPP/lib" -L"E:/c++lib/gcc" ../../../DEV-CPP/Lib/libwinmm.a  -s 
+INCS =  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"D:/Projects/gaudio-sdk/gaudio-sdk/include" 
+CXXINCS =  -I"D:/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/DEV-CPP/include/c++/3.4.2"  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"D:/Projects/gaudio-sdk/gaudio-sdk/include" 
+BIN  = ../gaudio-sdk/bin/addons/gwinmm.dll
+CXXFLAGS = $(CXXINCS)   -O2
+CFLAGS = $(INCS)   -O2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../gaudio-sdk/bin/addons/gwinmm.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=../gaudio-sdk/bin/addons/libgwinmm.def
+STATICLIB=../gaudio-sdk/bin/addons/libgwinmm.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+gwinmm.o: gwinmm.cpp
+	$(CPP) -c gwinmm.cpp -o gwinmm.o $(CXXFLAGS)
+
+sfifo.o: sfifo.c
+	$(CPP) -c sfifo.c -o sfifo.o $(CXXFLAGS)
+
+winmm_private.res: winmm_private.rc 
+	$(WINDRES) -i winmm_private.rc --input-format=rc -o winmm_private.res -O coff 

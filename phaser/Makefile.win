@@ -1,0 +1,37 @@
+# Project: gphaser
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = gphaser_private.res
+OBJ  = gphaser.o $(RES)
+LINKOBJ  = gphaser.o $(RES)
+LIBS =  -L"D:/MinGW/lib" -L"E:/c++lib/gcc" --no-export-all-symbols --add-stdcall-alias   ../gaudio-sdk/lib/libgaudio.dll.a  -s 
+INCS =  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"D:/Microsoft DirectX SDK (March 2009)/Include"  -I"../gaudio-sdk/include" 
+CXXINCS =  -I"D:/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/DEV-CPP/include/c++/3.4.2"  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"../gaudio-sdk/include" 
+BIN  = ../gaudio-sdk/bin/addons/gphaser.dll
+CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1   -O2
+CFLAGS = $(INCS) -DBUILDING_DLL=1   -O2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../gaudio-sdk/bin/addons/gphaser.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=../gaudio-sdk/bin/addons/libgphaser.def
+STATICLIB=../gaudio-sdk/bin/addons/libgphaser.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+gphaser.o: gphaser.cpp
+	$(CPP) -c gphaser.cpp -o gphaser.o $(CXXFLAGS)
+
+gphaser_private.res: gphaser_private.rc 
+	$(WINDRES) -i gphaser_private.rc --input-format=rc -o gphaser_private.res -O coff 

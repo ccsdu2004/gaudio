@@ -1,0 +1,89 @@
+GAUDIO LIBRAY -by duwenhua
+
+基本的API使用文档
+1.初始化音频库(参数:插件目录)
+    void gaudio_init(const char*);
+    标准释放方法为gaudio_init("addons");
+2卸载音频库
+	void gaudio_deinit();
+3.检测给定音频格式,音效,指定驱动是否被支持
+	第一个参数取值为AUDIO_PLUGIN_DECODER,AUDIO_PLUGIN_EFFECT,AUDIO_PLUGIN_DRIVER
+	第三个参数为具体格式值
+    int32_t gaudio_is_support(int32_t,int32_t);
+4.设置,获取全局浮点和整数变量
+	void gaudio_set_float(int32_t,float);
+	void gaudio_get_float(int32_t,float*);
+	void gaudio_set_int32(int32_t,int32_t);
+	void gaudio_get_int32(int32_t,int32_t*);
+	当前支持设置,获取的float变量枚举:全局音量增益/平衡
+	当前支持获取的int32_t变量枚举:驱动/版本/模式/平衡
+	当前支持设置的int32_t变量枚举:模式/平衡
+5.获取最后一次的错误信息
+	int32_t gaudio_error_get();
+	当前能得到的错误枚举和说明如下:
+	#define AUDIO_NO_ERROR      0  含义:无错误 
+	#define AUDIO_NOT_INIT      1  含义:音频库没有初始化
+	#define AUDIO_BAD_TAG       2  含义:错误的指定枚举
+	#define AUDIO_BAD_VALUE     3  含义:错误的变量值
+	#define AUDIO_NOT_SUPPORT   4  含义:不支持
+	#define AUDIO_BAD_OPERATION 5  含义:给定操作不支持
+	#define AUDIO_OUT_OF_MEMORY 6  含义:内存不足
+	#define AUDIO_OVER_COUNT    7  含义:操作超出库堆栈
+	#define AUDIO_INNER_ERROR   8  含义:内部异常
+6.设置,获取音源浮点,整形,字符串数据
+	void gaudio_source_set_float(gsource*,int32_t,float);
+	void gaudio_source_get_float(gsource*,int32_t,float*);
+	void gaudio_source_set_int32(gsource*,int32_t,int32_t);
+	void gaudio_source_get_int32(gsource*,int32_t,int32_t*);
+	int32_t gaudio_source_get_string(gsource*,int32_t,char*);
+	void gaudio_listener_set_float3(int32_t,float,float,float);
+	void gaudio_listener_get_float3(int32_t,float*,float*,float*);
+	当前支持设置,获取的float变量枚举:音源音量增益
+	当前支持设置,获取的long变量枚举:loop,silence
+	当前支持设置,获取的string变量枚举类型:TITLE,GENRE,ALBUM,ARTIST,PUBLISHDATE
+	void gaudio_listener_set_float3(int32_t,float,float,float);
+	void gaudio_listener_get_float3(int32_t,float*,float*,float*);
+	当前支持设置,获取的3d变量枚举:VELOCITY,POSITION,UP
+7.音源对象生成和销毁
+	gsource* gaudio_source_create_from_file(const char*,int32_t);
+	gsource* gaudio_source_create_from_buffer(int8_t*,uint32_t);
+	gsource* gaudio_source_create_from_virtual_io(gread,gseek,gtell,gclose,void*);
+	gsource* gaudio_source_create_from_buffer2(int8_t* buffer,uint32_t length,uint32_t channel,uint32_t format,uint32_t samplerate);
+	void gaudio_source_destroy(gsource*);
+	函数不言自明,需要说明的是gaudio_source_create_from_file第二个参数含义为是否把音频信息导入内存
+	当前支持的格式为wav,au,mpc,ogg
+8.设置播放结束和错误回调函数
+	void gaudio_source_set_finish_callback(gsource*,gfinish);
+	void gaudio_source_set_error_callback(gsource*,gerror);
+9.对音源的基本播放操作,3D模式暂没实现
+	void gaudio_source_start(gsource*,int32_t);
+	void gaudio_source_start_3d(gsource*,int32_t);
+	void gaudio_source_pause(gsource*);
+	void gaudio_source_stop(gsource*);
+	void gaudio_source_seek(gsource*,int32_t);
+	void gaudio_source_set_position_callback(gsource* source,gposition);
+10.音效的创建和销毁
+    geffect* gaudio_effect_create(int32_t,int32_t);
+    void gaudio_effect_destroy(geffect*);
+	当前实现的音效:低音增强,回声,调值,声道交换,声道合并,数据反转,淡入,淡出,调速,FFT
+	具体的音效支持以库配置为准
+11.绑定,卸载音效到全局,音源
+	void gaudio_effect_bind(geffect*,int32_t);
+	void gaudio_effect_bind_to_source(geffect*,gsource*);
+	void gaudio_effect_unbind(geffect*);
+	void gaudio_effect_unbind_from_source(geffect*,gsource*);
+	函数不言自明,需要说明的是并不是所有音效都支持绑定到全局和音源
+	例如:淡入,淡出只能绑定到音源
+12.设置和获取音效浮点,整形参数
+	void gaudio_effect_set_float(geffect*,int32_t,float);
+	void gaudio_effect_get_float(geffect*,int32_t,float*);
+	void gaudio_effect_set_int32(geffect*,int32_t,int32_t);
+	void gaudio_effect_get_int32(geffect*,int32_t,int32_t*);
+	函数不言自明,具体的枚举值视具体音效确定
+13.音频重录
+    grecorder* gaudio_recorder_create(const char* output,uint32_t audio,uint32_t channel,uint32_t samplerate,uint32_t format);
+    void gaudio_recorder_set_int32(grecorder*,uint32_t,uint32_t);
+    gaudio_recorder_set_string(grecorder*,uint32_t,const char*);
+    void gaudio_recorder_start(grecorder*);
+    void gaudio_recorder_stop(grecorder*);
+    void gaudio_recorder_destroy(grecorder*);	

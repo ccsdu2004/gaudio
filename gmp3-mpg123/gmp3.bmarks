@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<BrowseTracker_layout_file>
+	<ActiveTarget name="default" />
+	<File name="genre.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="1983" topLine="145" />
+	</File>
+	<File name="genre.h" open="0" top="0" tabpos="3">
+		<Cursor position="67" topLine="0" />
+	</File>
+	<File name="gid3v1tag.h" open="0" top="0" tabpos="5">
+		<Cursor position="51" topLine="0" />
+	</File>
+	<File name="gmp3.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="119" topLine="250" />
+		<BrowseMarks positions="" />
+		<Book_Marks positions="" />
+	</File>
+	<File name="private.rc" open="0" top="0" tabpos="1">
+		<Cursor position="199" topLine="0" />
+	</File>
+</BrowseTracker_layout_file>

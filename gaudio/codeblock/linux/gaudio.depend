@@ -1,0 +1,373 @@
+# depslib dependency file v1.0
+1383967990 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/dllmain.cpp
+	"gaudio.h"
+	<windows.h>
+
+1387456104 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/gaudio.h
+	<stdint.h>
+	"echo.h"
+	"phaser.h"
+	"modulator.h"
+	"fade.h"
+	"bassboost.h"
+	"speedchanger.h"
+	"distortion.h"
+	"fft.h"
+	"autowah.h"
+	"stereoenhancer.h"
+	"crossfeed.h"
+
+1367727264 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/stdint.h
+	<stddef.h>
+
+1380610963 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/echo.h
+
+1380611119 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/phaser.h
+
+1380611073 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/modulator.h
+
+1380610989 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/fade.h
+
+1380610880 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/bassboost.h
+
+1380962711 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/speedchanger.h
+
+1380611038 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/distortion.h
+
+1379341746 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/fft.h
+
+1380610888 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/autowah.h
+
+1380611159 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/stereoenhancer.h
+
+1380610917 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio-sdk/include/crossfeed.h
+
+1387456128 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/g3dcalc.cpp
+	<cmath>
+	<string.h>
+	<float.h>
+	"gmath.h"
+	"gcontext.h"
+	"gsource.h"
+
+1380290807 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmath.h
+	<cmath>
+	"gaudio.h"
+
+1384571615 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gcontext.h
+	<list>
+	"gaudio.h"
+	"gdriver.h"
+	"geffect.h"
+	"geffectfactory.h"
+	"gdecoder.h"
+	"gdecoderfactory.h"
+	"grecorder.h"
+	"grecorderfactory.h"
+	"gsource.h"
+	"gthread.h"
+	"gmain.h"
+	"glistener.h"
+
+1372851664 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gdriver.h
+	"gaudio.h"
+
+1380881359 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/geffect.h
+	<vector>
+	"gaudio.h"
+	"gsource.h"
+	"geffect.h"
+	"gthread.h"
+
+1384604938 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gsource.h
+	<list>
+	"gaudio.h"
+	"gmain.h"
+	"geffect.h"
+	"gdecoder.h"
+	"gthread.h"
+
+1384606075 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmain.h
+	<math.h>
+	"gaudio.h"
+	"gdecoder.h"
+
+1380933885 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gdecoder.h
+	<cstdio>
+	"gaudio.h"
+	"gmeta.h"
+
+1375005172 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmeta.h
+	"streamBuffer.h"
+
+1382880726 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/streamBuffer.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"gaudio.h"
+
+1380512509 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gthread.h
+	"gaudio.h"
+	"gmain.h"
+	<windows.h>
+	<pthread.h>
+
+1372854296 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/geffectfactory.h
+	<vector>
+	<utility>
+	"geffect.h"
+
+1375188050 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gdecoderfactory.h
+	<vector>
+	<utility>
+	"gdecreator.h"
+
+1367286608 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gdecreator.h
+	"gdecoder.h"
+
+1381238741 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/grecorder.h
+	"gaudio.h"
+
+1372853384 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/grecorderfactory.h
+	<vector>
+	<utility>
+	"grecorder.h"
+
+1384572473 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/glistener.h
+	"gaudio.h"
+
+1387456958 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gaddons.cpp
+	<windows.h>
+	<dlfcn.h>
+	<dirent.h>
+	<string.h>
+	"gstring.h"
+	"gaddons.h"
+	"gmemory.h"
+	"gmain.h"
+	"gmidi.h"
+
+1373801610 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gstring.h
+
+1383968573 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gaddons.h
+	"gaudio.h"
+	"gcontext.h"
+	"gmain.h"
+
+1366523700 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmemory.h
+	"gaudio.h"
+	"gmain.h"
+	"gcontext.h"
+
+1374501994 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmidi.h
+	"gaudio.h"
+	"gaddons.h"
+
+1383968338 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gaddress.cpp
+	<string.h>
+	"gaudio.h"
+	"gcontext.h"
+	"streamBuffer.h"
+	"gresample.h"
+	"gqueue.h"
+
+1366802462 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gresample.h
+
+1367320736 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gqueue.h
+	"gaudio.h"
+
+1384570577 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gaudio.cpp
+	<string.h>
+	"gaudio.h"
+	"gmath.h"
+	"gmain.h"
+	"gcontext.h"
+	"gaddons.h"
+	"gmidi.h"
+
+1380532775 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gcontext.cpp
+	<memory.h>
+	"gaudio.h"
+	"gmain.h"
+	"gcontext.h"
+	"gmemory.h"
+
+1378307638 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gdecoderfactory.cpp
+	"gcontext.h"
+	"gmain.h"
+	"gdecoder.h"
+	"gresample.h"
+	"vadilator.h"
+	"gdecoderfactory.h"
+	"gaddons.h"
+
+1366376552 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/vadilator.h
+	"gaudio.h"
+
+1384605014 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gdecpprocess.cpp
+	<algorithm>
+	"gmain.h"
+	"gmixer.h"
+	"gcontext.h"
+	"gdecoder.h"
+	"gmeta.h"
+	"gresample.h"
+	"gpanprocess.h"
+
+1378307510 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmixer.h
+	"gaudio.h"
+	"gmemory.h"
+
+1384567534 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gpanprocess.h
+	<algorithm>
+
+1384571529 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gdevice.cpp
+	"gmain.h"
+	"gmemory.h"
+	"gcontext.h"
+
+1380608184 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/geffect.cpp
+	"gcontext.h"
+	"geffect.h"
+
+1372855380 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/geffectfactory.cpp
+	"gaddons.h"
+	"geffectfactory.h"
+
+1378307800 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gerror.cpp
+	"gmain.h"
+	"gcontext.h"
+
+1382186495 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gfilter.cpp
+	"gmain.h"
+	"gmath.h"
+	"gfilter.h"
+
+1382187237 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gfilter.h
+	"gaudio.h"
+	"gmain.h"
+	"gmath.h"
+
+1380608366 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/glistener.cpp
+	"gcontext.h"
+	"glistener.h"
+
+1384604849 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gloop.cpp
+	"gcontext.h"
+	"gpanprocess.h"
+	"gmain.h"
+	"gmixer.h"
+
+1378307674 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmain.cpp
+	"gmain.h"
+
+1379646584 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmeta.cpp
+	<string.h>
+	"gmeta.h"
+
+1387457005 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmidi.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"gaddons.h"
+	"gdecreator.h"
+	"streamBuffer.h"
+	"gmain.h"
+	"timidity.h"
+
+1374502690 /media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/timidity.h
+	<stdio.h>
+	<stdlib.h>
+	"streamBuffer.h"
+
+1382761306 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmixer.cpp
+	<algorithm>
+	"gmath.h"
+	"gmixer.h"
+
+1368933810 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gmutex.cpp
+	"gthread.h"
+
+1384567454 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gpanprocess.cpp
+	"gpanprocess.h"
+	"gcontext.h"
+	"gmain.h"
+
+1378307692 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gqueue.cpp
+	<algorithm>
+	"gaudio.h"
+	"gmain.h"
+	"gqueue.h"
+
+1381492372 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/grawpcm.cpp
+	<stdio.h>
+	<stdlib.h>
+	"gaddons.h"
+	"gdecreator.h"
+	"streamBuffer.h"
+	"gmain.h"
+
+1383985082 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/grecorder.cpp
+	"gaudio.h"
+	"gcontext.h"
+	"grecorder.h"
+
+1383376258 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/grecorderfactory.cpp
+	"gaddons.h"
+	"grecorderfactory.h"
+
+1366802562 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gresample.cpp
+	<libresample.h>
+	"gresample.h"
+
+1210195210 /media/duwenhua/Disk:E/c++header/libresample.h
+
+1384589257 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gsource.cpp
+	<string.h>
+	<sys/types.h>
+	<sys/stat.h>
+	"gmemory.h"
+	"gcontext.h"
+	"gstring.h"
+	"gsource.h"
+	"gdecoder.h"
+	"streamBuffer.h"
+	"gresample.h"
+	"gmain.h"
+	"gmath.h"
+	<unistd.h>
+
+1384592041 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gsourcecls.cpp
+	<string.h>
+	<sys/types.h>
+	<sys/stat.h>
+	"gmemory.h"
+	"gcontext.h"
+	"gstring.h"
+	"gsource.h"
+	"gdecoder.h"
+	"streamBuffer.h"
+	"gresample.h"
+	"gmain.h"
+	"gmath.h"
+
+1374326850 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gstring.cpp
+	<string.h>
+	"gstring.h"
+
+1373801726 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/gthread.cpp
+	<stdlib.h>
+	"gaudio.h"
+	"gmain.h"
+	<windows.h>
+	<pthread.h>
+
+1380961331 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/streamBuffer.cpp
+	<stdio.h>
+	<string.h>
+	"streamBuffer.h"
+	"gmemory.h"
+
+1366376912 source:/media/duwenhua/Disk:D/Projects/gaudio-sdk/gaudio/gaudio/vadilator.cpp
+	"vadilator.h"
+

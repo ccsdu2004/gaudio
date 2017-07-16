@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1435406169 source:f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio-sdk\example\c\echo.c
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	"gaudio.h"
+
+1435149716 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio-sdk\example\c\gaudio.h
+	<stdint.h>
+
+1367727264 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio-sdk\include\stdint.h
+	<stddef.h>
+

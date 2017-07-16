@@ -1,0 +1,102 @@
+# depslib dependency file v1.0
+1435406606 source:f:\project\gaudio\projects\gaudio-sdk\gaudio\echo\gecho.cpp
+	<stdio.h>
+	<stdlib.h>
+	"../gaudio/gaddons.h"
+	"../gaudio/geffect.h"
+	"../gaudio/gmath.h"
+
+1435464434 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gaddons.h
+	"gaudio.h"
+	"gcontext.h"
+	"gmain.h"
+
+1435405460 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio-sdk\include\gaudio.h
+	<stdint.h>
+
+1367727264 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio-sdk\include\stdint.h
+	<stddef.h>
+
+1435465148 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gcontext.h
+	<list>
+	"gaudio.h"
+	"gdriver.h"
+	"geffect.h"
+	"gdecoder.h"
+	"gdecreator.h"
+	"gcatcher.h"
+	"gwriter.h"
+	"gsource.h"
+	"gthread.h"
+	"gmain.h"
+	"glistener.h"
+
+1372851664 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gdriver.h
+	"gaudio.h"
+
+1435405488 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\geffect.h
+	<vector>
+	<utility>
+	"gaudio.h"
+	"gaddons.h"
+	"gsource.h"
+	"geffect.h"
+	"gthread.h"
+
+1435151607 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gsource.h
+	<list>
+	"gaudio.h"
+	"gmain.h"
+	"geffect.h"
+	"gdecoder.h"
+	"gthread.h"
+
+1435405227 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gmain.h
+	<math.h>
+	"gaudio.h"
+	"gdecoder.h"
+
+1435374241 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gdecoder.h
+	<cstdio>
+	"gaudio.h"
+	"gmeta.h"
+
+1375005172 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gmeta.h
+	"streamBuffer.h"
+
+1435236391 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\streambuffer.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"gaudio.h"
+
+1435406071 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gthread.h
+	"gaudio.h"
+	"gmain.h"
+	<windows.h>
+	<pthread.h>
+
+1435240252 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gdecreator.h
+	<vector>
+	<utility>
+	"gdecoder.h"
+
+1435381006 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gcatcher.h
+	<vector>
+	<utility>
+	"gaudio.h"
+
+1435381074 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gwriter.h
+	<cstdio>
+	"gaudio.h"
+
+1384572473 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\glistener.h
+	"gaudio.h"
+
+1435237735 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio\gmath.h
+	<math.h>
+	"gaudio.h"
+
+1367211720 source:f:\project\gaudio\projects\gaudio-sdk\gaudio\echo\private.rc
+	<windows.h>
+

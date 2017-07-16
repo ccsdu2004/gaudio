@@ -1,0 +1,37 @@
+# Project: gmpc
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = gmpc_private.res
+OBJ  = gmpc.o $(RES)
+LINKOBJ  = gmpc.o $(RES)
+LIBS =  -L"D:/MinGW/lib" -L"E:/c++lib/gcc" --no-export-all-symbols --add-stdcall-alias E:/c++lib/gcc/libmpcdec.a ../gaudio-sdk/lib/libgaudio.dll.a  -s 
+INCS =  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"D:/Microsoft DirectX SDK (March 2009)/Include"  -I"../gaudio-sdk/include" 
+CXXINCS =  -I"D:/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/DEV-CPP/include/c++/3.4.2"  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"../gaudio-sdk/include" 
+BIN  = ../gaudio-sdk/bin/addons/gmpc.dll
+CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1 -MPC_SUPPORT_SV456=1   -O2
+CFLAGS = $(INCS) -DBUILDING_DLL=1 -MPC_SUPPORT_SV456=1   -O2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../gaudio-sdk/bin/addons/gmpc.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=../gaudio-sdk/bin/addons/libgmpc.def
+STATICLIB=../gaudio-sdk/bin/addons/libgmpc.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+gmpc.o: gmpc.cpp
+	$(CC) -c gmpc.cpp -o gmpc.o $(CFLAGS)
+
+gmpc_private.res: gmpc_private.rc 
+	$(WINDRES) -i gmpc_private.rc --input-format=rc -o gmpc_private.res -O coff 

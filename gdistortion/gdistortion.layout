@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="default" />
+	<File name="gdistortion.cpp" open="1" top="1" tabpos="34">
+		<Cursor position="208" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
+[Editors]
+Focused=0
+Order=0
+[Editor_0]
+Open=1
+Top=1
+CursorCol=1
+CursorRow=1
+TopLine=1
+LeftChar=1
+[Editor_1]
+Open=0
+Top=0

@@ -1,0 +1,39 @@
+using System;
+
+namespace gaudio.effect
+{
+    public enum GFormat
+    {
+        AUDIO_FORMAT_TYPE_NONE     = -1,
+        AUDIO_FORMAT_TYPE_INT4     = 1,
+        AUDIO_FORMAT_TYPE_INT8     = 1,
+        AUDIO_FORMAT_TYPE_UINT8    = 2,
+        AUDIO_FORMAT_TYPE_INT16    = 3,
+        AUDIO_FORMAT_TYPE_UINT16   = 4,
+        AUDIO_FORMAT_TYPE_INT24    = 5,
+        AUDIO_FORMAT_TYPE_INT32    = 6,
+        AUDIO_FORMAT_TYPE_UINT32   = 7,
+        AUDIO_FORMAT_TYPE_INT64    = 8,
+        AUDIO_FORMAT_TYPE_FLOAT    = 9,
+        AUDIO_FORMAT_TYPE_DOUBLE   = 10,
+        AUDIO_FORMAT_TYPE_ULAW     = 11,
+        AUDIO_FORMAT_TYPE_ALAW     = 12,
+        AUDIO_FORMAT_TYPE_VOX_ADPCM= 13,
+        AUDIO_FORMAT_TYPE_MS_ADPCM = 14,
+        AUDIO_FORMAT_TYPE_GSM610   = 15,
+        AUDIO_FORMAT_TYPE_IMA_ADPCM= 16,
+        AUDIO_FORMAT_TYPE_DPCM8    = 17,
+        AUDIO_FORMAT_TYPE_DPCM16   = 18,
+        AUDIO_FORMAT_TYPE_G723_24  = 19,
+        AUDIO_FORMAT_TYPE_G723_32  = 20,
+        AUDIO_FORMAT_TYPE_G723_40  = 21,
+        AUDIO_FORMAT_TYPE_DWVW_12  = 22,
+        AUDIO_FORMAT_TYPE_DWVW_16  = 23,
+        AUDIO_FORMAT_TYPE_DWVW_24  = 24,
+        AUDIO_FORMAT_TYPE_DWVW_N   = 25,
+        AUDIO_FORMAT_TYPE_VORBIS   = 26,
+        AUDIO_FORMAT_TYPE_MPC      = 27,
+        AUDIO_FORMAT_TYPE_MAX      = 100
+    };
+}
+

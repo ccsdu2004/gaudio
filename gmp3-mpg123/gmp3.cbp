@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gmp3" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="..\gaudio-sdk\bin\addons\gmp3" prefix_auto="1" extension_auto="1" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-DWIN32" />
+					<Add option="-DBUILDING" />
+					<Add option="-D_WIN32" />
+					<Add directory="..\gaudio-sdk\include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add library="E:\c++lib\gcc\libmpg123.a" />
+					<Add library="..\gaudio-sdk\lib\libgaudio.dll.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DBUILDING_DLL=1" />
+			<Add directory="D:\Projects\gaudio-sdk\gaudio-sdk\include" />
+		</Compiler>
+		<Unit filename="genre.cpp" />
+		<Unit filename="genre.h" />
+		<Unit filename="gid3v1tag.h" />
+		<Unit filename="gmp3.cpp" />
+		<Unit filename="private.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

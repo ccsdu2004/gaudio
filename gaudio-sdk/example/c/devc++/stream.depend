@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1372575032 source:f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio-sdk\example\c\getopt.c
+	<stdio.h>
+	<string.h>
+
+1435389056 source:f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio-sdk\example\c\stream.c
+	<stdlib.h>
+	<stdio.h>
+	<stdint.h>
+	<string.h>
+	<conio.h>
+	"getopt.h"
+	<unistd.h>
+	"gaudio.h"
+
+1367727264 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio-sdk\include\stdint.h
+	<stddef.h>
+
+1372575054 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio-sdk\example\c\getopt.h
+
+1435149716 f:\project\gaudio\projects\gaudio-sdk\gaudio\gaudio-sdk\example\c\gaudio.h
+	<stdint.h>
+

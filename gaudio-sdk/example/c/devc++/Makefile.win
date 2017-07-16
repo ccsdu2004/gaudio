@@ -1,0 +1,33 @@
+# Project: stream
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = ../stream.o ../getopt.o $(RES)
+LINKOBJ  = ../stream.o ../getopt.o $(RES)
+LIBS =  -L"D:/MinGW/lib" -L"E:/c++lib/gcc" ../../../lib/libgaudio.dll.a  -s 
+INCS =  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"D:/Microsoft DirectX SDK (March 2009)/Include"  -I"../../../include" 
+CXXINCS =  -I"D:/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/DEV-CPP/include/c++/3.4.2"  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"../../../include" 
+BIN  = ../../../bin/stream.exe
+CXXFLAGS = $(CXXINCS)   -O2
+CFLAGS = $(INCS)   -O2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../../../bin/stream.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "..\..\..\bin\stream.exe" $(LIBS)
+
+../stream.o: ../stream.c
+	$(CC) -c ../stream.c -o ../stream.o $(CFLAGS)
+
+../getopt.o: ../getopt.c
+	$(CC) -c ../getopt.c -o ../getopt.o $(CFLAGS)

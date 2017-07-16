@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gaudio" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../gaudio-sdk/bin/gaudio" prefix_auto="1" extension_auto="1" />
+				<Option object_output="gaudio/Debug" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DBUILDING" />
+				</Compiler>
+				<Linker>
+					<Add library="user32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="../../../gaudio-sdk/bin/gaudio" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../windows" />
+				<Option object_output="gaudio/Release" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DBUILDING" />
+					<Add option="-DHAVE_UNISTD_H" />
+					<Add option="-DHAVE_STAT" />
+					<Add option="-DWIN32" />
+					<Add directory="../../../gaudio-sdk/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="user32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../../bs2b.cpp" />
+		<Unit filename="../../bs2b.h" />
+		<Unit filename="../../dllmain.cpp" />
+		<Unit filename="../../filterkit.cpp" />
+		<Unit filename="../../filterkit.h" />
+		<Unit filename="../../g168effect.cpp" />
+		<Unit filename="../../g3dcalc.cpp" />
+		<Unit filename="../../gaddons.cpp" />
+		<Unit filename="../../gaddons.h" />
+		<Unit filename="../../gaddress.cpp" />
+		<Unit filename="../../gaiffile.cpp" />
+		<Unit filename="../../gaudio.cpp" />
+		<Unit filename="../../gaudio_private.h" />
+		<Unit filename="../../gaufile.cpp" />
+		<Unit filename="../../gcatcher.h" />
+		<Unit filename="../../gcontext.cpp" />
+		<Unit filename="../../gcontext.h" />
+		<Unit filename="../../gdecoderfactory.cpp" />
+		<Unit filename="../../gdecpprocess.cpp" />
+		<Unit filename="../../gdecreator.h" />
+		<Unit filename="../../gdevice.cpp" />
+		<Unit filename="../../gdriver.h" />
+		<Unit filename="../../geffect.cpp" />
+		<Unit filename="../../geffect.h" />
+		<Unit filename="../../geffectfactory.cpp" />
+		<Unit filename="../../gerror.cpp" />
+		<Unit filename="../../gfade.cpp" />
+		<Unit filename="../../gfilter.cpp" />
+		<Unit filename="../../gfilter.h" />
+		<Unit filename="../../glistener.cpp" />
+		<Unit filename="../../glistener.h" />
+		<Unit filename="../../gloop.cpp" />
+		<Unit filename="../../gmain.cpp" />
+		<Unit filename="../../gmain.h" />
+		<Unit filename="../../gmath.h" />
+		<Unit filename="../../gmemory.h" />
+		<Unit filename="../../gmeta.cpp" />
+		<Unit filename="../../gmeta.h" />
+		<Unit filename="../../gmixer.cpp" />
+		<Unit filename="../../gmixer.h" />
+		<Unit filename="../../gmutex.cpp" />
+		<Unit filename="../../gpanprocess.cpp" />
+		<Unit filename="../../gpanprocess.h" />
+		<Unit filename="../../gqueue.cpp" />
+		<Unit filename="../../gqueue.h" />
+		<Unit filename="../../grawpcm.cpp" />
+		<Unit filename="../../grecorder.cpp" />
+		<Unit filename="../../grecorder.h" />
+		<Unit filename="../../grecorderfactory.cpp" />
+		<Unit filename="../../gresample.cpp" />
+		<Unit filename="../../gresample.h" />
+		<Unit filename="../../gsource.cpp" />
+		<Unit filename="../../gsource.h" />
+		<Unit filename="../../gsourcecls.cpp" />
+		<Unit filename="../../gspeedchanger.cpp" />
+		<Unit filename="../../gstring.cpp" />
+		<Unit filename="../../gstring.h" />
+		<Unit filename="../../gthread.cpp" />
+		<Unit filename="../../gthread.h" />
+		<Unit filename="../../gvector.h" />
+		<Unit filename="../../gwavefile.cpp" />
+		<Unit filename="../../gwriter.cpp" />
+		<Unit filename="../../gwriter.h" />
+		<Unit filename="../../gwriterfactory.cpp" />
+		<Unit filename="../../libresample.h" />
+		<Unit filename="../../resample.cpp" />
+		<Unit filename="../../resample_defs.h" />
+		<Unit filename="../../resamplesubs.cpp" />
+		<Unit filename="../../resource.h" />
+		<Unit filename="../../stdint.h" />
+		<Unit filename="../../streamBuffer.cpp" />
+		<Unit filename="../../streamBuffer.h" />
+		<Unit filename="../../vadilator.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

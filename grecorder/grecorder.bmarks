@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<BrowseTracker_layout_file>
+	<ActiveTarget name="default" />
+	<File name="encode\lib_Aac.cpp" open="1" top="0" tabpos="1">
+		<Cursor position="452" topLine="17" />
+	</File>
+	<File name="grecorder.cpp" open="1" top="0" tabpos="2">
+		<Cursor position="1354" topLine="47" />
+	</File>
+	<File name="internal.h" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="libaudio.h" open="1" top="0" tabpos="5">
+		<Cursor position="138" topLine="0" />
+	</File>
+	<File name="libe.cpp" open="1" top="1" tabpos="3">
+		<Cursor position="1773" topLine="51" />
+		<BrowseMarks positions="" />
+		<Book_Marks positions="" />
+	</File>
+	<File name="private.rc" open="1" top="0" tabpos="6">
+		<Cursor position="462" topLine="6" />
+		<BrowseMarks positions="" />
+		<Book_Marks positions="" />
+	</File>
+</BrowseTracker_layout_file>

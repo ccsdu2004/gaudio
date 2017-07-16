@@ -1,0 +1,37 @@
+# Project: gspeedchanger
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = gspeedchanger_private.res
+OBJ  = gspeedchanger.o $(RES)
+LINKOBJ  = gspeedchanger.o $(RES)
+LIBS =  -L"D:/MinGW/lib" -L"E:/c++lib/gcc" --no-export-all-symbols --add-stdcall-alias ../gaudio-sdk/lib/libgaudio.dll.a  -s 
+INCS =  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"D:/Microsoft DirectX SDK (March 2009)/Include"  -I"../gaudio-sdk/include" 
+CXXINCS =  -I"D:/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/DEV-CPP/include/c++/3.4.2"  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"../gaudio-sdk/include" 
+BIN  = ../gaudio-sdk/bin/addons/gspeedchanger.dll
+CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1   -O2
+CFLAGS = $(INCS) -DBUILDING_DLL=1   -O2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../gaudio-sdk/bin/addons/gspeedchanger.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=../gaudio-sdk/bin/addons/libgspeedchanger.def
+STATICLIB=../gaudio-sdk/bin/addons/libgspeedchanger.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+gspeedchanger.o: gspeedchanger.cpp
+	$(CPP) -c gspeedchanger.cpp -o gspeedchanger.o $(CXXFLAGS)
+
+gspeedchanger_private.res: gspeedchanger_private.rc 
+	$(WINDRES) -i gspeedchanger_private.rc --input-format=rc -o gspeedchanger_private.res -O coff 

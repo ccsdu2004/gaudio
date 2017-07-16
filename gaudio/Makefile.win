@@ -1,0 +1,139 @@
+# Project: gaudio
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = gaudio_private.res
+OBJ  = bs2b.o dllmain.o filterkit.o g3dcalc.o gaddons.o gaddress.o gaudio.o gcontext.o gdecoderfactory.o gdecpprocess.o gdevice.o geffect.o geffectfactory.o gerror.o gfilter.o glistener.o gloop.o gmain.o gmeta.o gmixer.o gmutex.o gpanprocess.o gqueue.o grawpcm.o grecorder.o grecorderfactory.o gresample.o gsource.o gsourcecls.o gstring.o gthread.o resample.o resamplesubs.o streamBuffer.o vadilator.o $(RES)
+LINKOBJ  = bs2b.o dllmain.o filterkit.o g3dcalc.o gaddons.o gaddress.o gaudio.o gcontext.o gdecoderfactory.o gdecpprocess.o gdevice.o geffect.o geffectfactory.o gerror.o gfilter.o glistener.o gloop.o gmain.o gmeta.o gmixer.o gmutex.o gpanprocess.o gqueue.o grawpcm.o grecorder.o grecorderfactory.o gresample.o gsource.o gsourcecls.o gstring.o gthread.o resample.o resamplesubs.o streamBuffer.o vadilator.o $(RES)
+LIBS =  -L"d:/Dev-Cpp/lib" --no-export-all-symbols --add-stdcall-alias 
+INCS =  -I"d:/Dev-Cpp/include" 
+CXXINCS =  -I"d:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"d:/Dev-Cpp/include/c++/3.4.2/backward"  -I"d:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"d:/Dev-Cpp/include/c++/3.4.2"  -I"d:/Dev-Cpp/include" 
+BIN  = gaudio.dll
+CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1 
+CFLAGS = $(INCS) -DBUILDING_DLL=1 
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before gaudio.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=libgaudio.def
+STATICLIB=libgaudio.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+bs2b.o: bs2b.c
+	$(CPP) -c bs2b.c -o bs2b.o $(CXXFLAGS)
+
+dllmain.o: dllmain.cpp
+	$(CPP) -c dllmain.cpp -o dllmain.o $(CXXFLAGS)
+
+filterkit.o: filterkit.c
+	$(CPP) -c filterkit.c -o filterkit.o $(CXXFLAGS)
+
+g3dcalc.o: g3dcalc.cpp
+	$(CPP) -c g3dcalc.cpp -o g3dcalc.o $(CXXFLAGS)
+
+gaddons.o: gaddons.cpp
+	$(CPP) -c gaddons.cpp -o gaddons.o $(CXXFLAGS)
+
+gaddress.o: gaddress.cpp
+	$(CPP) -c gaddress.cpp -o gaddress.o $(CXXFLAGS)
+
+gaudio.o: gaudio.cpp
+	$(CPP) -c gaudio.cpp -o gaudio.o $(CXXFLAGS)
+
+gcontext.o: gcontext.cpp
+	$(CPP) -c gcontext.cpp -o gcontext.o $(CXXFLAGS)
+
+gdecoderfactory.o: gdecoderfactory.cpp
+	$(CPP) -c gdecoderfactory.cpp -o gdecoderfactory.o $(CXXFLAGS)
+
+gdecpprocess.o: gdecpprocess.cpp
+	$(CPP) -c gdecpprocess.cpp -o gdecpprocess.o $(CXXFLAGS)
+
+gdevice.o: gdevice.cpp
+	$(CPP) -c gdevice.cpp -o gdevice.o $(CXXFLAGS)
+
+geffect.o: geffect.cpp
+	$(CPP) -c geffect.cpp -o geffect.o $(CXXFLAGS)
+
+geffectfactory.o: geffectfactory.cpp
+	$(CPP) -c geffectfactory.cpp -o geffectfactory.o $(CXXFLAGS)
+
+gerror.o: gerror.cpp
+	$(CPP) -c gerror.cpp -o gerror.o $(CXXFLAGS)
+
+gfilter.o: gfilter.cpp
+	$(CPP) -c gfilter.cpp -o gfilter.o $(CXXFLAGS)
+
+glistener.o: glistener.cpp
+	$(CPP) -c glistener.cpp -o glistener.o $(CXXFLAGS)
+
+gloop.o: gloop.cpp
+	$(CPP) -c gloop.cpp -o gloop.o $(CXXFLAGS)
+
+gmain.o: gmain.cpp
+	$(CPP) -c gmain.cpp -o gmain.o $(CXXFLAGS)
+
+gmeta.o: gmeta.cpp
+	$(CPP) -c gmeta.cpp -o gmeta.o $(CXXFLAGS)
+
+gmixer.o: gmixer.cpp
+	$(CPP) -c gmixer.cpp -o gmixer.o $(CXXFLAGS)
+
+gmutex.o: gmutex.cpp
+	$(CPP) -c gmutex.cpp -o gmutex.o $(CXXFLAGS)
+
+gpanprocess.o: gpanprocess.cpp
+	$(CPP) -c gpanprocess.cpp -o gpanprocess.o $(CXXFLAGS)
+
+gqueue.o: gqueue.cpp
+	$(CPP) -c gqueue.cpp -o gqueue.o $(CXXFLAGS)
+
+grawpcm.o: grawpcm.cpp
+	$(CPP) -c grawpcm.cpp -o grawpcm.o $(CXXFLAGS)
+
+grecorder.o: grecorder.cpp
+	$(CPP) -c grecorder.cpp -o grecorder.o $(CXXFLAGS)
+
+grecorderfactory.o: grecorderfactory.cpp
+	$(CPP) -c grecorderfactory.cpp -o grecorderfactory.o $(CXXFLAGS)
+
+gresample.o: gresample.cpp
+	$(CPP) -c gresample.cpp -o gresample.o $(CXXFLAGS)
+
+gsource.o: gsource.cpp
+	$(CPP) -c gsource.cpp -o gsource.o $(CXXFLAGS)
+
+gsourcecls.o: gsourcecls.cpp
+	$(CPP) -c gsourcecls.cpp -o gsourcecls.o $(CXXFLAGS)
+
+gstring.o: gstring.cpp
+	$(CPP) -c gstring.cpp -o gstring.o $(CXXFLAGS)
+
+gthread.o: gthread.cpp
+	$(CPP) -c gthread.cpp -o gthread.o $(CXXFLAGS)
+
+resample.o: resample.c
+	$(CPP) -c resample.c -o resample.o $(CXXFLAGS)
+
+resamplesubs.o: resamplesubs.c
+	$(CPP) -c resamplesubs.c -o resamplesubs.o $(CXXFLAGS)
+
+streamBuffer.o: streamBuffer.cpp
+	$(CPP) -c streamBuffer.cpp -o streamBuffer.o $(CXXFLAGS)
+
+vadilator.o: vadilator.cpp
+	$(CPP) -c vadilator.cpp -o vadilator.o $(CXXFLAGS)
+
+gaudio_private.res: gaudio_private.rc gaudio_private.rc 
+	$(WINDRES) -i gaudio_private.rc --input-format=rc -o gaudio_private.res -O coff 

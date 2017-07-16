@@ -1,0 +1,37 @@
+# Project: gwv
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = gwv_private.res
+OBJ  = gwv.o $(RES)
+LINKOBJ  = gwv.o $(RES)
+LIBS =  -L"D:/MinGW/lib" -L"E:/c++lib/gcc" --no-export-all-symbols --add-stdcall-alias ../gaudio-sdk/lib/libgaudio.dll.a E:/c++lib/gcc/libwavpack.a  -s 
+INCS =  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"D:/Microsoft DirectX SDK (March 2009)/Include"  -I"../gaudio-sdk/include" 
+CXXINCS =  -I"D:/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/DEV-CPP/include/c++/3.4.2"  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"../gaudio-sdk/include" 
+BIN  = ../gaudio-sdk/bin/addons/gwv.dll
+CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1   -O2
+CFLAGS = $(INCS) -DBUILDING_DLL=1   -O2
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../gaudio-sdk/bin/addons/gwv.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=../gaudio-sdk/bin/addons/libgwv.def
+STATICLIB=../gaudio-sdk/bin/addons/libgwv.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+gwv.o: gwv.cpp
+	$(CPP) -c gwv.cpp -o gwv.o $(CXXFLAGS)
+
+gwv_private.res: gwv_private.rc 
+	$(WINDRES) -i gwv_private.rc --input-format=rc -o gwv_private.res -O coff 

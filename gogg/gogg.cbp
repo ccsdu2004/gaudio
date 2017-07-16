@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="gogg" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="../gaudio-sdk/bin/addons/gogg" prefix_auto="1" extension_auto="1" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DBUILDING_DLL=1" />
+			<Add directory="../gaudio-sdk/include" />
+		</Compiler>
+		<Linker>
+			<Add option="E:/c++lib/gcc/libvorbis.a" />
+			<Add option="E:/c++lib/gcc/libogg.a" />
+			<Add option="../gaudio-sdk/lib/libgaudio.dll.a" />
+		</Linker>
+		<Unit filename="gogg.cpp" />
+		<Unit filename="private.rc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

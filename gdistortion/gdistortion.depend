@@ -1,0 +1,275 @@
+# depslib dependency file v1.0
+1371207506 source:d:\projects\gaudio-sdk\gdistortion\private.rc
+	<windows.h>
+
+1379656775 source:d:\projects\gaudio-sdk\gdistortion\gdistortion.cpp
+	<stdio.h>
+	<stdlib.h>
+	"gaudio.h"
+	"distortion.h"
+	"../gaudio/gaddons.h"
+	"../gaudio/geffect.h"
+	"../gaudio/gmain.h"
+
+1379653074 d:\projects\gaudio-sdk\gaudio-sdk\include\gaudio.h
+	<stdint.h>
+	"echo.h"
+	"phaser.h"
+	"modulator.h"
+	"fade.h"
+	"bassboost.h"
+	"speedchanger.h"
+	"distortion.h"
+	"fft.h"
+	"autowah.h"
+	"stereoenhancer.h"
+	"zipper.h"
+	"crossfeed.h"
+
+1367727264 d:\projects\gaudio-sdk\gaudio-sdk\include\stdint.h
+	<stddef.h>
+
+1379341680 d:\projects\gaudio-sdk\gaudio-sdk\include\echo.h
+
+1379341713 d:\projects\gaudio-sdk\gaudio-sdk\include\phaser.h
+
+1379341702 d:\projects\gaudio-sdk\gaudio-sdk\include\modulator.h
+
+1379341694 d:\projects\gaudio-sdk\gaudio-sdk\include\fade.h
+
+1379341671 d:\projects\gaudio-sdk\gaudio-sdk\include\bassboost.h
+
+1379341720 d:\projects\gaudio-sdk\gaudio-sdk\include\speedchanger.h
+
+1379656754 d:\projects\gaudio-sdk\gaudio-sdk\include\distortion.h
+
+1379341747 d:\projects\gaudio-sdk\gaudio-sdk\include\fft.h
+
+1379341765 d:\projects\gaudio-sdk\gaudio-sdk\include\autowah.h
+
+1377354300 d:\projects\gaudio-sdk\gaudio-sdk\include\stereoenhancer.h
+
+1375706379 d:\projects\gaudio-sdk\gaudio\gaddons.h
+	"gaudio.h"
+	"gcontext.h"
+	"gmain.h"
+
+1379656534 d:\projects\gaudio-sdk\gaudio\gcontext.h
+	<list>
+	"gaudio.h"
+	"gdriver.h"
+	"geffect.h"
+	"geffectfactory.h"
+	"gdecoder.h"
+	"gdecoderfactory.h"
+	"grecorder.h"
+	"grecorderfactory.h"
+	"gsource.h"
+	"gthread.h"
+	"gmain.h"
+	"glistener.h"
+
+1372851664 d:\projects\gaudio-sdk\gaudio\gdriver.h
+	"gaudio.h"
+
+1379642524 d:\projects\gaudio-sdk\gaudio\geffect.h
+	<vector>
+	"gaudio.h"
+	"gsource.h"
+	"geffect.h"
+	"gthread.h"
+
+1374069288 d:\projects\gaudio-sdk\gaudio\gsource.h
+	<list>
+	"gaudio.h"
+	"gmain.h"
+	"geffect.h"
+	"gdecoder.h"
+	"gthread.h"
+
+1379646239 d:\projects\gaudio-sdk\gaudio\gmain.h
+	<math.h>
+	"gaudio.h"
+	"gdecoder.h"
+
+1375003282 d:\projects\gaudio-sdk\gaudio\gdecoder.h
+	<cstdio>
+	"gaudio.h"
+	"gmeta.h"
+
+1375005172 d:\projects\gaudio-sdk\gaudio\gmeta.h
+	"streamBuffer.h"
+
+1374503946 d:\projects\gaudio-sdk\gaudio\streambuffer.h
+	<stdio.h>
+	<stdlib.h>
+	"gaudio.h"
+
+1375705777 d:\projects\gaudio-sdk\gaudio\gthread.h
+	"gaudio.h"
+	"gmain.h"
+	<windows.h>
+	<pthread.h>
+
+1372854296 d:\projects\gaudio-sdk\gaudio\geffectfactory.h
+	<vector>
+	<utility>
+	"geffect.h"
+
+1375188051 d:\projects\gaudio-sdk\gaudio\gdecoderfactory.h
+	<vector>
+	<utility>
+	"gdecreator.h"
+
+1367286608 d:\projects\gaudio-sdk\gaudio\gdecreator.h
+	"gdecoder.h"
+
+1372939976 d:\projects\gaudio-sdk\gaudio\grecorder.h
+	"gaudio.h"
+
+1372853384 d:\projects\gaudio-sdk\gaudio\grecorderfactory.h
+	<vector>
+	<utility>
+	"grecorder.h"
+
+1366287246 d:\projects\gaudio-sdk\gaudio\glistener.h
+	"gaudio.h"
+
+1379341774 d:\projects\gaudio-sdk\gaudio-sdk\include\zipper.h
+
+1379341785 d:\projects\gaudio-sdk\gaudio-sdk\include\crossfeed.h
+
+1371207506 source:e:\gaudio\gdistortion\private.rc
+	<windows.h>
+
+1379657102 source:e:\gaudio\gdistortion\gdistortion.cpp
+	<stdio.h>
+	<stdlib.h>
+	"gaudio.h"
+	"distortion.h"
+	"../gaudio/gaddons.h"
+	"../gaudio/geffect.h"
+	"../gaudio/gmain.h"
+
+1375706378 e:\gaudio\gaudio\gaddons.h
+	"gaudio.h"
+	"gcontext.h"
+	"gmain.h"
+
+1380290048 e:\gaudio\gaudio\gcontext.h
+	<list>
+	"gaudio.h"
+	"gdriver.h"
+	"geffect.h"
+	"geffectfactory.h"
+	"gdecoder.h"
+	"gdecoderfactory.h"
+	"grecorder.h"
+	"grecorderfactory.h"
+	"gsource.h"
+	"gthread.h"
+	"gmain.h"
+	"glistener.h"
+
+1372851664 e:\gaudio\gaudio\gdriver.h
+	"gaudio.h"
+
+1379642524 e:\gaudio\gaudio\geffect.h
+	<vector>
+	"gaudio.h"
+	"gsource.h"
+	"geffect.h"
+	"gthread.h"
+
+1380289843 e:\gaudio\gaudio\gsource.h
+	<list>
+	"gaudio.h"
+	"gmain.h"
+	"geffect.h"
+	"gdecoder.h"
+	"gthread.h"
+
+1380290587 e:\gaudio\gaudio\gmain.h
+	<math.h>
+	"gaudio.h"
+	"gdecoder.h"
+
+1379657778 e:\gaudio\gaudio\gdecoder.h
+	<cstdio>
+	"gaudio.h"
+	"gmeta.h"
+
+1375005172 e:\gaudio\gaudio\gmeta.h
+	"streamBuffer.h"
+
+1374503946 e:\gaudio\gaudio\streambuffer.h
+	<stdio.h>
+	<stdlib.h>
+	"gaudio.h"
+
+1375705776 e:\gaudio\gaudio\gthread.h
+	"gaudio.h"
+	"gmain.h"
+	<windows.h>
+	<pthread.h>
+
+1372854296 e:\gaudio\gaudio\geffectfactory.h
+	<vector>
+	<utility>
+	"geffect.h"
+
+1375188050 e:\gaudio\gaudio\gdecoderfactory.h
+	<vector>
+	<utility>
+	"gdecreator.h"
+
+1367286608 e:\gaudio\gaudio\gdecreator.h
+	"gdecoder.h"
+
+1372939976 e:\gaudio\gaudio\grecorder.h
+	"gaudio.h"
+
+1372853384 e:\gaudio\gaudio\grecorderfactory.h
+	<vector>
+	<utility>
+	"grecorder.h"
+
+1379657730 e:\gaudio\gaudio\glistener.h
+	"gaudio.h"
+
+1380289787 e:\gaudio\gaudio-sdk\include\gaudio.h
+	<stdint.h>
+	"echo.h"
+	"phaser.h"
+	"modulator.h"
+	"fade.h"
+	"bassboost.h"
+	"distortion.h"
+	"fft.h"
+	"autowah.h"
+	"stereoenhancer.h"
+	"zipper.h"
+	"crossfeed.h"
+
+1379341680 e:\gaudio\gaudio-sdk\include\echo.h
+
+1379341712 e:\gaudio\gaudio-sdk\include\phaser.h
+
+1379341702 e:\gaudio\gaudio-sdk\include\modulator.h
+
+1379341694 e:\gaudio\gaudio-sdk\include\fade.h
+
+1379341670 e:\gaudio\gaudio-sdk\include\bassboost.h
+
+1379656754 e:\gaudio\gaudio-sdk\include\distortion.h
+
+1379341746 e:\gaudio\gaudio-sdk\include\fft.h
+
+1379341764 e:\gaudio\gaudio-sdk\include\autowah.h
+
+1377354300 e:\gaudio\gaudio-sdk\include\stereoenhancer.h
+
+1379341774 e:\gaudio\gaudio-sdk\include\zipper.h
+
+1379341784 e:\gaudio\gaudio-sdk\include\crossfeed.h
+

@@ -1,0 +1,93 @@
+GAudio - an audio library for C, C++ and C#
+	
+GAudio Pro
+
+GAudio is available in two editions: GAudio and GAudio Pro. GAudio may 
+not be used in commercial products while GAudio pro may. There are also 
+some few differences in the features (see below) of both versions.
+
+License and Price
+
+GAudio doesn't cost anything and is free for non-commercial use. GAudio 
+Pro may be used in commercial products and is available with three licenses:
+
+License Type                      	Summary 	
+Price    
+	
+Buy
+GAudio
+non commercial You can use GAudio freely for non-commercial products. Just download and go!
+	
+0€
+	
+it's free
+GAudio Pro hobbyist
+(unlimited) License for hobbyist developers (individuals, not companies) to use GAudio in an unlimited amount of products. Includes all GAudio Pro features, on all supported platforms (details)
+
+84€*
+	
+GAudio Pro indie
+(unlimited) 	License for independent developers to use GAudio in an unlimited amount of commercial products. Includes all GAudio Pro features, on all supported platforms (details)
+
+284€*
+	
+GAudio Pro full
+(single product) 	License for GAudio to be used in one commercial product. Includes all GAudio Pro features, on all supported platforms, updates, access to preliminary patches, priorized support via mail (details)
+
+584€*
+	
+Plimus and Shareit are our trusted payment processors.
+
+It is also possible to get special discounts for unusual or low selling products using GAudio.
+Please use the contact form for questions about the license, but you can also contact us via mail for further questions.
+
+* Price excluding VAT: Depending on your location or company status, VAT may be added the price.
+
+
+Feature Comparison
+
+The following table compares the features of GAudio and GAudio Pro. For a detailed description of these features, please take a look at the features page.
+
+Feature description 	GAudio 	GAudio Pro
+general features
+Price 	0€, it's free 	65€ - 490€
+Allowed for commercial use 	- 	yes
+2D sound 	yes 	yes
+3D sound 	yes 	yes
+sound streaming 	yes 	yes
+sound buffering 	yes 	yes
+single and multi threading 	yes 	yes
+static linkable C++ library (no .dll file needed anymore)[3] 	- 	yes
+strong name, signed .NET assembly 	yes 	yes
+plugin system 	yes 	yes
+accurate play position seeking 	yes 	yes
+audio recording[1] 	yes 	yes
+special sound features
+various rolloff models (linear, logarithmic) 	yes 	yes
+sound effects (echo, reverb, flanger, ...)[1] 	yes 	yes
+doppler effects[1] 	yes 	yes
+changeable playback speed / frequency 	yes 	yes
+sound event callbacks (function call once a sound has finished playing) 	yes 	yes
+supported file formats
+RIFF WAVE (*.wav) 	yes 	yes
+Sun Microsystems' AU Format(*.au) yes yes 
+Audio Interchange File Format (*.aiff/*.aif) yes  yes
+Ogg Vorbis (*.ogg) 	yes 	yes
+MPEG-1 Audio Layer 3 (*.mp3)[2] 	yes 	yes
+Amiga Modules (*.mod) 	yes 	yes
+Impulse Tracker (*.it) 	yes 	yes
+Scream Tracker 3 (*.s3d) 	yes 	yes
+Fast Tracker 2 (*.xm) 	yes 	yes
+Musepack(*.mpc) yes yes
+True Audio(*.tta)   yes
+Musical Instrument Digital Interface(*.mid/*.mid) yes yes 
+supported platforms  
+Windows 98, ME, NT 4, 2000, XP, Vista 	yes 	yes
+Linux 	yes 	yes
+.NET (Windows) 	yes 	yes
+
+
+
+[1]: This feature is currently only available when using the DirectSound driver (will be selected automaticly) on Windows platforms.
+[2]: MP3 playback is done via a plugin which comes along with irrKlang (and its full source code) so that it is easily possible to remove mp3 support if wished. If you are using mp3 playback in your application, you might need to purchase an mp3 license from Thompson Multimedia as most software using mp3s has to, although there are special prices and conditions for games.
+

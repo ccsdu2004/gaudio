@@ -1,0 +1,67 @@
+# Project: grecorder
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = o/grecorder_private.res
+OBJ  = o/grecorder.o o/libe.o o/wavpack_Encoder.o o/lib_Aac.o o/lib_Ape.o o/lib_Lame.o o/lib_Twolame.o o/lib_Sndfile.o o/bitwise.o o/framing.o o/lib_Flac.o $(RES)
+LINKOBJ  = o/grecorder.o o/libe.o o/wavpack_Encoder.o o/lib_Aac.o o/lib_Ape.o o/lib_Lame.o o/lib_Twolame.o o/lib_Sndfile.o o/bitwise.o o/framing.o o/lib_Flac.o $(RES)
+LIBS =  -L"D:/MinGW/lib" -L"E:/c++lib/gcc" --no-export-all-symbols --add-stdcall-alias E:/c++lib/gcc/libwavpack.a E:/c++lib/gcc/twolame.a E:/c++lib/gcc/libape.a E:/c++lib/gcc/libmp3lame.a E:/c++lib/gcc/libws2_32.a E:/c++lib/gcc/libfaac.a E:/c++lib/gcc/libFLAC.a  sndfile.a D:/DEV-CPP/Lib/libws2_32.a  
+INCS =  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"D:/Microsoft DirectX SDK (March 2009)/Include"  -I"../gaudio-sdk/include" 
+CXXINCS =  -I"D:/DEV-CPP/lib/gcc/mingw32/3.4.2/include"  -I"D:/DEV-CPP/include/c++/3.4.2/backward"  -I"D:/DEV-CPP/include/c++/3.4.2/mingw32"  -I"D:/DEV-CPP/include/c++/3.4.2"  -I"D:/DEV-CPP/include"  -I"E:/c++header"  -I"../gaudio-sdk/include" 
+BIN  = ../gaudio-sdk/bin/addons/grecorder.dll
+CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1  
+CFLAGS = $(INCS) -DBUILDING_DLL=1  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before ../gaudio-sdk/bin/addons/grecorder.dll all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+DLLWRAP=dllwrap.exe
+DEFFILE=../gaudio-sdk/bin/addons/libgrecorder.def
+STATICLIB=../gaudio-sdk/bin/addons/libgrecorder.a
+
+$(BIN): $(LINKOBJ)
+	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)
+
+o/grecorder.o: grecorder.cpp
+	$(CPP) -c grecorder.cpp -o o/grecorder.o $(CXXFLAGS)
+
+o/libe.o: libe.cpp
+	$(CPP) -c libe.cpp -o o/libe.o $(CXXFLAGS)
+
+o/wavpack_Encoder.o: encode/wavpack_Encoder.cpp
+	$(CPP) -c encode/wavpack_Encoder.cpp -o o/wavpack_Encoder.o $(CXXFLAGS)
+
+o/lib_Aac.o: encode/lib_Aac.cpp
+	$(CPP) -c encode/lib_Aac.cpp -o o/lib_Aac.o $(CXXFLAGS)
+
+o/lib_Ape.o: encode/lib_Ape.cpp
+	$(CPP) -c encode/lib_Ape.cpp -o o/lib_Ape.o $(CXXFLAGS)
+
+o/lib_Lame.o: encode/lib_Lame.cpp
+	$(CPP) -c encode/lib_Lame.cpp -o o/lib_Lame.o $(CXXFLAGS)
+
+o/lib_Twolame.o: encode/lib_Twolame.cpp
+	$(CPP) -c encode/lib_Twolame.cpp -o o/lib_Twolame.o $(CXXFLAGS)
+
+o/lib_Sndfile.o: encode/lib_Sndfile.cpp
+	$(CPP) -c encode/lib_Sndfile.cpp -o o/lib_Sndfile.o $(CXXFLAGS)
+
+o/bitwise.o: ogg/bitwise.c
+	$(CPP) -c ogg/bitwise.c -o o/bitwise.o $(CXXFLAGS)
+
+o/framing.o: ogg/framing.c
+	$(CPP) -c ogg/framing.c -o o/framing.o $(CXXFLAGS)
+
+o/lib_Flac.o: encode/lib_Flac.cpp
+	$(CPP) -c encode/lib_Flac.cpp -o o/lib_Flac.o $(CXXFLAGS)
+
+o/grecorder_private.res: grecorder_private.rc 
+	$(WINDRES) -i grecorder_private.rc --input-format=rc -o o/grecorder_private.res -O coff 

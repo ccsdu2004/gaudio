@@ -1,0 +1,3 @@
+; dlltool --base-file C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cca03664.base --output-exp grecorder.exp --dllname grecorder.dll --output-def libgrecorder.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cca03664.def --output-lib libgrecorder.a
+EXPORTS
+	ginstance @ 1

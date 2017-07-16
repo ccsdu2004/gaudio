@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="grecorder" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="..\gaudio-sdk\bin\addons\grecorder" prefix_auto="1" extension_auto="1" />
+				<Option object_output="o" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Linker>
+					<Add option="E:/c++lib/gcc/libwavpack.a" />
+					<Add option="E:/c++lib/gcc/twolame.a" />
+					<Add option="E:/c++lib/gcc/libmp3lame.a" />
+					<Add option="E:/c++lib/gcc/libfaac.a" />
+					<Add option="E:/c++lib/gcc/libFLAC.a" />
+					<Add option="sndfile.a" />
+					<Add option="D:/DEV-CPP/Lib/libws2_32.a" />
+					<Add option="-static-libstdc++" />
+					<Add option="-static-libgcc" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-DBUILDING_DLL=1" />
+			<Add directory="..\gaudio-sdk\include" />
+		</Compiler>
+		<Unit filename="encode\lame_Encoder.h" />
+		<Unit filename="encode\lib_Aac.cpp" />
+		<Unit filename="encode\lib_Aac.h" />
+		<Unit filename="encode\lib_Encoder.h" />
+		<Unit filename="encode\lib_Flac.cpp" />
+		<Unit filename="encode\lib_Flac.h" />
+		<Unit filename="encode\lib_Lame.cpp" />
+		<Unit filename="encode\lib_Lame.h" />
+		<Unit filename="encode\lib_Sndfile.cpp" />
+		<Unit filename="encode\lib_Sndfile.h" />
+		<Unit filename="encode\lib_Twolame.cpp" />
+		<Unit filename="encode\lib_Twolame.h" />
+		<Unit filename="encode\md5.h" />
+		<Unit filename="encode\wavpack_Encoder.cpp" />
+		<Unit filename="encode\wavpack_Encoder.h" />
+		<Unit filename="grecorder.cpp" />
+		<Unit filename="internal.h" />
+		<Unit filename="libaudio.h" />
+		<Unit filename="libe.cpp" />
+		<Unit filename="ogg\bitwise.c">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="ogg\framing.c">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Unit filename="private.rc">
+			<Option compilerVar="CPP" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

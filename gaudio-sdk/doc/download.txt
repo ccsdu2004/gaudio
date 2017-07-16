@@ -1,0 +1,45 @@
+
+GAudio Downloads
+
+Downloads are governed by our Terms & Conditions.
+
+Description  
+GAudio 2.1.0.3 	
+
+Summary
+GAudio is a simple and fast audio API for C, C++ and .NET languages. This package contains the engine as .dll, and header files, some examples, the API documentation as .htm files, for platforms (win32, and win64)(linux version is under testing). 
+
+Download 
+GAudio-2.1.0.3.zip
+
+GAudio 2.1.0.3 Pro.
+Same as GAudio above, but with some few more features and the possibility to use it in commercial applications. See the GAudio pro page for details. 	[GAudio-pro-2.1.0.3.zip] (only available with license)
+
+Free additions to GAudio:
+
+1.SoundFont package 
+The Soundfont files for GAudio, it is for mid/midi 's playing. Without it,mid/midi music will play 
+with mute. instruments.zip 
+
+2.C# wrapper 2.1.0.3 for GAudio2.1.0.3.
+A wrapper for making GAudio usable in C#(.NET), GAudio2.1.0.3(C# version).zip
+
+3.libsndfile wrapper for GAudio 2.1.0.3
+A wrapper for decoding audio with <link>libsndfile</link> - http://www.mega-nerd.com/libsndfile/
+
+4.portaudio wrapper for GAudio 2.1.0.3
+A rawpper for playing back audio with <link>portaudio</link> addon link=http://www.portaudio.com/
+ 
+
+GAudio scene node for Irrlicht 	A class for the Irrlicht engine, which encapsulates GAudio 3D sounds in an Irrlicht Scene Node. Also includes a scene node factory to save and load GAudio scene nodes to and from .irr files. 	download [for irrlicht 1.4 and 1.5]
+download [for irrlicht 1.3]
+ 
+
+
+Previous GAudio versions
+(details of changes): 
+以下为空
+
+注意英文部分可能描述有问题 到时候可能会做修改
+
+具体请参考页面http://www.ambiera.com/irrklang/downloads.html
