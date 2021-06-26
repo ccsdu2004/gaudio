@@ -1,5 +1,0 @@
-bin\Release\Echo.exe
-bin\Release\Echo.pdb
-obj\Release\ResolveAssemblyReference.cache
-obj\Release\Echo.exe
-obj\Release\Echo.pdb
