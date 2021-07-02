@@ -7,7 +7,6 @@
 
 gdecoderfactory::~gdecoderfactory()
 {
-    printf("desc1\n");
     std::vector<std::pair<void*,gdecreator*> >::iterator itr = list.begin();
     while(itr != list.end())
     {
@@ -17,7 +16,6 @@ gdecoderfactory::~gdecoderfactory()
         gaddonclose(handle);;
         itr++;
     }
-    printf("desc2\n");
 }
 
 int32_t gdecoderfactory::is_support(int32_t dec,int32_t mask)

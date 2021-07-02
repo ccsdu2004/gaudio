@@ -33,6 +33,7 @@
 				<Compiler>
 					<Add option="-Os" />
 					<Add option="-Wall" />
+					<Add option="-std=c++14" />
 					<Add option="-g" />
 					<Add option="-DBUILDING" />
 					<Add option="-DHAVE_UNISTD_H" />
@@ -120,8 +121,6 @@
 		<Unit filename="../../streamBuffer.h" />
 		<Unit filename="../../vadilator.cpp" />
 		<Extensions>
-			<code_completion />
-			<debugger />
 			<DoxyBlocks>
 				<comment_style block="0" line="0" />
 				<doxyfile_project />
@@ -131,7 +130,6 @@
 				<doxyfile_dot />
 				<general />
 			</DoxyBlocks>
-			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

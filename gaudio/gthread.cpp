@@ -40,14 +40,12 @@ void* gstartthread(uint32_t(*func)(void*),void *ptr)
 
 uint32_t gstopthread(void* thread)
 {
-    printf("...\n");
     ThreadInfo* inf = (ThreadInfo*)thread;
     WaitForSingleObject(inf->thread,INFINITE);
     DWORD ret = 0;
     GetExitCodeThread(inf->thread,&ret);
     CloseHandle(inf->thread);
     free(inf);
-    printf(".....\n");
     return (uint32_t)ret;
 }
 

@@ -25,9 +25,7 @@ gcontext::gcontext()
 
 gcontext::~gcontext()
 {
-    printf("bbb1\n");
     if(bs2bptr)
         free(bs2bptr);
     bs2bptr = 0;
-    printf("bbb2\n");
 }

@@ -8,16 +8,11 @@
 void GAPIENTRY gexitcallback()
 {
     gstopthread(scontext.thread);
-    printf("12\n");
     if(scontext.driver)
     {
-        printf("123\n");
         scontext.driver->close(scontext.driver);
-        printf("124\n");
         scontext.driver->destroy(scontext.driver);
-        printf("125\n");
         scontext.driver = 0;
-        printf("126\n");
     }
 }
 

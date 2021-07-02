@@ -101,7 +101,6 @@ What's new
 	Support 3D effect
 	Modified pan setting range to [-1,1];
 	Fixed a bug of gwinmm
-	
 14.Posted on 2013/12.15 
     Update version to 2.1.1.0
     Support tremolo effect

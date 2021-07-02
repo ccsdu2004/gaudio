@@ -75,3 +75,15 @@
 
 1380611196 d:\projects\gaudio-sdk\gaudio\gaudio-sdk\include\effect\stereomatrix.h
 
+1624707468 source:f:\gaudio\gaudio-sdk\example\c\echo.c
+	<stdlib.h>
+	<conio.h>
+	<stdio.h>
+	"gaudio.h"
+
+1624707468 f:\gaudio\gaudio-sdk\example\c\gaudio.h
+	<stdint.h>
+
+1624707468 f:\gaudio\gaudio-sdk\include\stdint.h
+	<stddef.h>
+

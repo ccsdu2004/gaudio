@@ -863,3 +863,413 @@
 	"../gaudio/geffect.h"
 	"../gaudio/gmain.h"
 
+1624707468 source:f:\gaudio\gaudio\bs2b.cpp
+	"gmath.h"
+	"bs2b.h"
+
+1624707468 f:\gaudio\gaudio\gmath.h
+	<math.h>
+	"gaudio.h"
+
+1624707468 f:\gaudio\gaudio-sdk\include\gaudio.h
+	<stdint.h>
+
+1624707468 f:\gaudio\gaudio-sdk\include\stdint.h
+	<stddef.h>
+
+1624707468 f:\gaudio\gaudio\bs2b.h
+
+1624707468 source:f:\gaudio\gaudio\dllmain.cpp
+	"gaudio.h"
+	<windows.h>
+
+1624707468 source:f:\gaudio\gaudio\filterkit.cpp
+	"resample_defs.h"
+	"filterkit.h"
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<math.h>
+
+1624707468 f:\gaudio\gaudio\resample_defs.h
+	<inttypes.h>
+
+1624707468 f:\gaudio\gaudio\filterkit.h
+	"resample_defs.h"
+
+1624707468 source:f:\gaudio\gaudio\g168effect.cpp
+	<stdio.h>
+	<stdlib.h>
+	"gaudio.h"
+	"../gaudio/gaddons.h"
+	"../gaudio/geffect.h"
+	"../gaudio/gmain.h"
+
+1624707468 f:\gaudio\gaudio\gaddons.h
+	"gaudio.h"
+	"gcontext.h"
+	"gmain.h"
+
+1624707468 f:\gaudio\gaudio\gcontext.h
+	<list>
+	"gaudio.h"
+	"gdriver.h"
+	"geffect.h"
+	"gdecoder.h"
+	"gdecreator.h"
+	"gcatcher.h"
+	"gwriter.h"
+	"gsource.h"
+	"gthread.h"
+	"gmain.h"
+	"glistener.h"
+
+1624707468 f:\gaudio\gaudio\gdriver.h
+	"gaudio.h"
+
+1624707468 f:\gaudio\gaudio\geffect.h
+	<vector>
+	<utility>
+	"gaudio.h"
+	"gaddons.h"
+	"gsource.h"
+	"geffect.h"
+	"gthread.h"
+
+1624707468 f:\gaudio\gaudio\gsource.h
+	<list>
+	"gaudio.h"
+	"gmain.h"
+	"geffect.h"
+	"gdecoder.h"
+	"gthread.h"
+
+1624707468 f:\gaudio\gaudio\gmain.h
+	<math.h>
+	"gaudio.h"
+	"gdecoder.h"
+
+1624707468 f:\gaudio\gaudio\gdecoder.h
+	<cstdio>
+	"gaudio.h"
+	"gmeta.h"
+
+1624707468 f:\gaudio\gaudio\gmeta.h
+	"streamBuffer.h"
+
+1624707468 f:\gaudio\gaudio\streambuffer.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"gaudio.h"
+
+1624707468 f:\gaudio\gaudio\gthread.h
+	"gaudio.h"
+	"gmain.h"
+	<windows.h>
+	<pthread.h>
+
+1624707468 f:\gaudio\gaudio\gdecreator.h
+	<vector>
+	<utility>
+	"gdecoder.h"
+
+1624707468 f:\gaudio\gaudio\gcatcher.h
+	<vector>
+	<utility>
+	"gaudio.h"
+
+1624707468 f:\gaudio\gaudio\gwriter.h
+	<cstdio>
+	"gaudio.h"
+
+1624707468 f:\gaudio\gaudio\glistener.h
+	"gaudio.h"
+
+1624707468 source:f:\gaudio\gaudio\g3dcalc.cpp
+	<cmath>
+	<string.h>
+	<float.h>
+	"gmath.h"
+	"gcontext.h"
+	"gsource.h"
+
+1624707468 source:f:\gaudio\gaudio\gaddons.cpp
+	<windows.h>
+	<dlfcn.h>
+	<dirent.h>
+	<string.h>
+	"gstring.h"
+	"gaddons.h"
+	"gmemory.h"
+	"gmain.h"
+
+1624707468 f:\gaudio\gaudio\gstring.h
+
+1624707468 f:\gaudio\gaudio\gmemory.h
+	"gaudio.h"
+	"gmain.h"
+	"gcontext.h"
+
+1624707468 source:f:\gaudio\gaudio\gaddress.cpp
+	<string.h>
+	"gaudio.h"
+	"gcontext.h"
+	"streamBuffer.h"
+	"gresample.h"
+	"gqueue.h"
+
+1624707468 f:\gaudio\gaudio\gresample.h
+
+1624707468 f:\gaudio\gaudio\gqueue.h
+	"gaudio.h"
+
+1624707468 source:f:\gaudio\gaudio\gaiffile.cpp
+	<stdio.h>
+	<stdlib.h>
+	"gaddons.h"
+	"gdecreator.h"
+	"streamBuffer.h"
+	"gmain.h"
+
+1624707468 source:f:\gaudio\gaudio\gaufile.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"gaddons.h"
+	"gdecreator.h"
+	"streamBuffer.h"
+
+1624707468 source:f:\gaudio\gaudio\gdecpprocess.cpp
+	<algorithm>
+	"gmain.h"
+	"gmixer.h"
+	"gcontext.h"
+	"gdecoder.h"
+	"gmeta.h"
+	"gresample.h"
+	"gpanprocess.h"
+
+1624707468 f:\gaudio\gaudio\gmixer.h
+	"gaudio.h"
+	"gmemory.h"
+
+1624707468 f:\gaudio\gaudio\gpanprocess.h
+	<algorithm>
+
+1624707468 source:f:\gaudio\gaudio\geffect.cpp
+	"gcontext.h"
+	"geffect.h"
+
+1624707468 source:f:\gaudio\gaudio\gerror.cpp
+	"gmain.h"
+	"gcontext.h"
+
+1624707468 source:f:\gaudio\gaudio\gfade.cpp
+	<stdio.h>
+	<stdlib.h>
+	"gaudio.h"
+	"gaddons.h"
+	"geffect.h"
+	"gmath.h"
+
+1624707468 source:f:\gaudio\gaudio\gfilter.cpp
+	"gmain.h"
+	"gmath.h"
+	"gfilter.h"
+
+1624707468 f:\gaudio\gaudio\gfilter.h
+	"gaudio.h"
+	"gmain.h"
+	"gmath.h"
+
+1624707468 source:f:\gaudio\gaudio\glistener.cpp
+	"gcontext.h"
+	"glistener.h"
+
+1624707468 source:f:\gaudio\gaudio\gloop.cpp
+	"gcontext.h"
+	"gpanprocess.h"
+	"gmain.h"
+	"gmixer.h"
+	"bs2b.h"
+
+1624707468 source:f:\gaudio\gaudio\gmain.cpp
+	"gmain.h"
+
+1624707468 source:f:\gaudio\gaudio\gmeta.cpp
+	<string.h>
+	"gmeta.h"
+
+1624707468 source:f:\gaudio\gaudio\gmixer.cpp
+	<algorithm>
+	"gmath.h"
+	"gmixer.h"
+
+1624707468 source:f:\gaudio\gaudio\gmutex.cpp
+	"gthread.h"
+
+1624707468 source:f:\gaudio\gaudio\gpanprocess.cpp
+	"gpanprocess.h"
+	"gcontext.h"
+	"gmain.h"
+
+1624707468 source:f:\gaudio\gaudio\gqueue.cpp
+	<algorithm>
+	"gaudio.h"
+	"gmain.h"
+	"gqueue.h"
+
+1624707468 source:f:\gaudio\gaudio\grawpcm.cpp
+	<stdio.h>
+	<stdlib.h>
+	"gaddons.h"
+	"gdecreator.h"
+	"streamBuffer.h"
+	"gmain.h"
+
+1624707468 source:f:\gaudio\gaudio\grecorder.cpp
+	"gaudio.h"
+	"gcontext.h"
+	"gcatcher.h"
+
+1624707468 source:f:\gaudio\gaudio\grecorderfactory.cpp
+	"gaddons.h"
+	"gcatcher.h"
+
+1624707468 source:f:\gaudio\gaudio\gresample.cpp
+	"libresample.h"
+	"gresample.h"
+
+1624707468 f:\gaudio\gaudio\libresample.h
+
+1624707468 source:f:\gaudio\gaudio\gsource.cpp
+	<string.h>
+	<sys/types.h>
+	<sys/stat.h>
+	"gmemory.h"
+	"gcontext.h"
+	"gstring.h"
+	"gsource.h"
+	"gdecoder.h"
+	"streamBuffer.h"
+	"gresample.h"
+	"gmain.h"
+	"gmath.h"
+	<unistd.h>
+
+1624707468 source:f:\gaudio\gaudio\gsourcecls.cpp
+	<string.h>
+	<sys/types.h>
+	<sys/stat.h>
+	"gmemory.h"
+	"gcontext.h"
+	"gstring.h"
+	"gsource.h"
+	"gdecoder.h"
+	"streamBuffer.h"
+	"gresample.h"
+	"gmain.h"
+	"gmath.h"
+
+1624707468 source:f:\gaudio\gaudio\gspeedchanger.cpp
+	<stdio.h>
+	<stdlib.h>
+	"gfilter.h"
+	"gaddons.h"
+	"geffect.h"
+	"gmain.h"
+	"gmath.h"
+
+1624707468 source:f:\gaudio\gaudio\gstring.cpp
+	<string.h>
+	"gstring.h"
+
+1624707468 source:f:\gaudio\gaudio\gwavefile.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<iostream>
+	"gaudio.h"
+	"gaddons.h"
+	"gdecreator.h"
+	"streamBuffer.h"
+	"gmain.h"
+	"gmath.h"
+
+1624707468 source:f:\gaudio\gaudio\gwriter.cpp
+	"gaudio.h"
+	"gcontext.h"
+
+1624707468 source:f:\gaudio\gaudio\gwriterfactory.cpp
+	"gcontext.h"
+	"gmain.h"
+	"gwriter.h"
+	"gaddons.h"
+
+1624707468 source:f:\gaudio\gaudio\resample.cpp
+	"libresample.h"
+	"resample_defs.h"
+	"filterkit.h"
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+
+1624707468 source:f:\gaudio\gaudio\resamplesubs.cpp
+	"resample_defs.h"
+	"filterkit.h"
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+
+1624707468 source:f:\gaudio\gaudio\streambuffer.cpp
+	<stdio.h>
+	<string.h>
+	"streamBuffer.h"
+	"gmemory.h"
+
+1624707468 source:f:\gaudio\gaudio\vadilator.cpp
+	"gmain.h"
+
+1625053532 source:f:\gaudio\gaudio\gaudio.cpp
+	<string.h>
+	"gaudio.h"
+	"gmath.h"
+	"gmain.h"
+	"gcontext.h"
+	"gaddons.h"
+
+1625053551 source:f:\gaudio\gaudio\gcontext.cpp
+	<memory.h>
+	"gaudio.h"
+	"bs2b.h"
+	"gmain.h"
+	"gcontext.h"
+	"gmemory.h"
+
+1625053576 source:f:\gaudio\gaudio\gdecoderfactory.cpp
+	"gcontext.h"
+	"gmain.h"
+	"gdecoder.h"
+	"gresample.h"
+	"gdecreator.h"
+	"gaddons.h"
+
+1625053569 source:f:\gaudio\gaudio\gdevice.cpp
+	"gmain.h"
+	"gmemory.h"
+	"gcontext.h"
+
+1625053563 source:f:\gaudio\gaudio\geffectfactory.cpp
+	"gaddons.h"
+	"geffect.h"
+
+1625053551 source:f:\gaudio\gaudio\gthread.cpp
+	<stdlib.h>
+	"gaudio.h"
+	"gmain.h"
+	<windows.h>
+	<pthread.h>
+

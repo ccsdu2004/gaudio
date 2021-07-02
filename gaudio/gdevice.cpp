@@ -26,12 +26,10 @@ gdevice::gdevice()
 
 gdevice::~gdevice()
 {
-    printf("gdevice1.\n");
     uint32_t i=0;
     for(;i<AUDIO_CHANNEL_CUR;i++)
         gFreeBuffer(frontbuffer.data[i]);
     gFreeBuffer(backbuffer.buffer);
-    printf("gdevice2.\n");
 }
 
 void gdevice::applyeffect()
